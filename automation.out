@@ -1,0 +1,129 @@
+2018-12-18 12:12:29 INFO  TestBase:131 - Initialize Web driver: 708348097
+2018-12-18 12:12:34 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 12:12:34 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 12:12:111 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 12:12:124 INFO  WaitHelper:142 - page is loaded
+2018-12-18 12:12:354 INFO  TestBase:72 - ************** testLoginToApplication Started***************
+2018-12-18 12:12:342 INFO  TestBase:131 - Initialize Web driver: 524223214
+2018-12-18 12:12:345 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 12:12:345 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 12:12:352 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 12:12:356 INFO  WaitHelper:142 - page is loaded
+2018-12-18 12:12:468 INFO  LoginToSite:36 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:891 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:895 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:895 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:904 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:910 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:105 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:993 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:158 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:162 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:162 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:170 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:175 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:319 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:766 INFO  TestBase:89 - **************testLoginToApplicationFinished***************
+2018-12-18 13:12:83 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:86 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:87 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:94 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:103 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:245 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:661 INFO  TestBase:89 - **************testLoginToApplicationFinished***************
+2018-12-18 13:12:645 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:649 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:650 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:659 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:663 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:840 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:43 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:47 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:47 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:57 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:62 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:241 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:722 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:725 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:726 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:733 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:739 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:888 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:985 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:523 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:527 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:528 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:536 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:540 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:728 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:514 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:115 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 13:12:119 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:119 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 13:12:127 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 13:12:135 INFO  WaitHelper:142 - page is loaded
+2018-12-18 13:12:304 INFO  TestBase:71 - ************** testLoginToApplication Started***************
+2018-12-18 13:12:618 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 13:12:802 INFO  WaitHelper:152 - waiting for :Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='header']/div[2]/div/div/nav/div[1]/a' for :200 seconds
+2018-12-18 13:12:542 INFO  TestBase:89 - **************testLoginToApplicationFinished***************
+2018-12-18 14:12:477 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 14:12:481 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:482 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 14:12:489 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 14:12:495 INFO  WaitHelper:142 - page is loaded
+2018-12-18 14:12:639 INFO  TestBase:71 - ************** loginToApp Started***************
+2018-12-18 14:12:711 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:905 INFO  WaitHelper:152 - waiting for :Proxy element for: DefaultElementLocator 'By.xpath: //input[@type='tel']' for :200 seconds
+2018-12-18 14:12:583 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 14:12:583 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:583 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 14:12:604 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 14:12:614 INFO  WaitHelper:142 - page is loaded
+2018-12-18 14:12:777 INFO  TestBase:71 - ************** loginToApp Started***************
+2018-12-18 14:12:05 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:98 INFO  WaitHelper:152 - waiting for :Proxy element for: DefaultElementLocator 'By.xpath: //input[@type='tel']' for :200 seconds
+2018-12-18 14:12:352 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 14:12:363 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:363 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 14:12:373 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 14:12:384 INFO  WaitHelper:142 - page is loaded
+2018-12-18 14:12:596 INFO  TestBase:71 - ************** loginToApp Started***************
+2018-12-18 14:12:290 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:856 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 14:12:856 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:856 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 14:12:869 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 14:12:874 INFO  WaitHelper:142 - page is loaded
+2018-12-18 14:12:50 INFO  TestBase:71 - ************** loginToApp Started***************
+2018-12-18 14:12:312 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:969 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 14:12:973 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:973 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 14:12:981 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 14:12:986 INFO  WaitHelper:142 - page is loaded
+2018-12-18 14:12:148 INFO  TestBase:71 - ************** loginToApp Started***************
+2018-12-18 14:12:439 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:720 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 14:12:726 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:727 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 14:12:734 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 14:12:739 INFO  WaitHelper:142 - page is loaded
+2018-12-18 14:12:918 INFO  TestBase:71 - ************** loginToApp Started***************
+2018-12-18 14:12:236 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:372 INFO  WaitHelper:152 - waiting for :Proxy element for: DefaultElementLocator 'By.xpath: //input[@type='tel']' for :200 seconds
+2018-12-18 14:12:755 INFO  TestBase:89 - **************loginToAppFinished***************
+2018-12-18 14:12:128 INFO  TestBase:130 - Initialize Web driver: 1745043985
+2018-12-18 14:12:133 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:133 INFO  WaitHelper:37 - Implicit Wait has been set to: 120
+2018-12-18 14:12:143 INFO  WaitHelper:140 - waiting for page to load for : SECONDS seconds
+2018-12-18 14:12:149 INFO  WaitHelper:142 - page is loaded
+2018-12-18 14:12:333 INFO  TestBase:71 - ************** loginToApp Started***************
+2018-12-18 14:12:796 INFO  WaitHelper:27 - WaitHelper object created..
+2018-12-18 14:12:797 INFO  TestBase:163 - capturing ui navigation screen...
+2018-12-18 14:12:798 INFO  JavaScriptHelper:18 - JavaScriptHelper has been initialised
+2018-12-18 14:12:277 INFO  JavaScriptHelper:18 - JavaScriptHelper has been initialised
+2018-12-18 14:12:300 INFO  ShoppinCartSummaryPage:58 - Switching to facebook login window
+2018-12-18 14:12:328 INFO  WaitHelper:108 - waiting for :[[ChromeDriver: chrome on XP (91085f18a93860b47f9446af0a0185db)] -> xpath: /html/body/div[1]/iframe] for :10 seconds
+2018-12-18 14:12:386 INFO  WaitHelper:111 - frame is available and switched
+2018-12-18 14:12:386 INFO  ShoppinCartSummaryPage:83 - Closed the visitor login popup
+2018-12-18 14:12:719 INFO  TestBase:89 - **************loginToAppFinished***************
