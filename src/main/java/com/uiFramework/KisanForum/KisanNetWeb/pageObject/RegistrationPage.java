@@ -93,7 +93,7 @@ public class RegistrationPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		waitHelper.waitForElement(mrRadioButton,ObjectReader.reader.getExplicitWait());
+		waitHelper.waitForElementVisible(mrRadioButton,ObjectReader.reader.getExplicitWait());
 		TestBase.logExtentReport("RegistrationPage object created...");
 		new TestBase().getNavigationScreen(driver);
 	}

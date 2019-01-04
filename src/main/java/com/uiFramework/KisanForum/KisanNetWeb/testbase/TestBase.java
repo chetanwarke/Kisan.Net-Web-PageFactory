@@ -64,15 +64,21 @@ public class TestBase {
 		test = extent.createTest(getClass().getSimpleName());
 	}
 	
+	@BeforeClass
+	public void beforeClass() {
+		driver.manage().deleteAllCookies();
+		getApplicationUrl(ObjectReader.reader.getUrl());
+	}
 	
 	@BeforeMethod
 	public void beforeMethod(Method method){
 		test.log(Status.INFO, method.getName()+"**************test started***************");
-		log.info("************** "+method.getName()+" Started***************");
+		log.info("**************"+method.getName()+" Started***************");
 	}
 	
 	@AfterMethod
-	public void afterMethod(ITestResult result) throws IOException{
+	public void afterMethod(ITestResult result) throws IOException, Exception{
+		Thread.sleep(4000);
 		if(result.getStatus() == ITestResult.FAILURE){
 			test.log(Status.FAIL, result.getThrowable());
 			String imagePath = captureScreen(result.getName(),driver);
@@ -93,6 +99,7 @@ public class TestBase {
 	@AfterTest
 	public void afterTest() throws Exception{
 		if(driver!=null){
+			driver.manage().deleteAllCookies();
 			driver.quit();
 		}
 	}
@@ -177,14 +184,15 @@ public class TestBase {
 	
 	public void getApplicationUrl(String url){
 		driver.get(url);
+		log.info("navigating to ..."+url);
 		logExtentReport("navigating to ..."+url);
 	}
 	
-	public Object[][] getExcelData(String excelName, String sheetName){
+	public Object[][] getExcelData(String excelName, String sheetName) throws Exception{
 		String excelLocation = ResourceHelper.getResourcePath("src/main/resources/configfile/")+excelName;
 		log.info("excel location "+excelLocation);
 		ExcelHelper excelHelper = new ExcelHelper();
-		Object[][] data = excelHelper.getExcelData(excelLocation, sheetName);
+		Object[][] data = excelHelper.getExcelData1(excelLocation, sheetName);
 		return data;
 	}
 }

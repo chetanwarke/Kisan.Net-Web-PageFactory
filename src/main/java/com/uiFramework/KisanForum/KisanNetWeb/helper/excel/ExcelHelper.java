@@ -2,12 +2,20 @@ package com.uiFramework.KisanForum.KisanNetWeb.helper.excel;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Iterator;
 
 import org.apache.log4j.Logger;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -41,12 +49,14 @@ public class ExcelHelper {
 			// Iterate Through each Rows one by one.
 			Iterator<Row> rowIterator = sheet.iterator();
 			int i = 0;
+
 			while (rowIterator.hasNext()) {
 				i++;
 				// for Every row , we need to iterator over columns
 				Row row = rowIterator.next();
+				
 				Iterator<Cell> cellIterator = row.cellIterator();
-				int j = 0;
+				int x = 0;
 				while (cellIterator.hasNext()) {
 					
 					Cell cell = cellIterator.next();
@@ -57,19 +67,23 @@ public class ExcelHelper {
 					}
 					switch (cell.getCellType()) {
 					case Cell.CELL_TYPE_STRING:
-						dataSets[i-1][j++] = cell.getStringCellValue();
+						dataSets[i-1][x++] = cell.getStringCellValue();
+						//System.out.println(dataSets[i-1][x++].toString());
 						break;
 					case Cell.CELL_TYPE_NUMERIC:
-						dataSets[i-1][j++] = cell.getNumericCellValue();
+						double mobile = cell.getNumericCellValue();
+						String mobileInStringFormat = BigDecimal.valueOf(mobile).toPlainString();
+						dataSets[i-1][x++] = mobileInStringFormat;
+						//dataSets[i-1][j++] = cell.getNumericCellValue();
 						break;
 					case Cell.CELL_TYPE_BOOLEAN:
-						dataSets[i-1][j++] = cell.getBooleanCellValue();
+						dataSets[i-1][x++] = cell.getBooleanCellValue();
 					case Cell.CELL_TYPE_FORMULA:
-						dataSets[i-1][j++] = cell.getCellFormula();
+						dataSets[i-1][x++] = cell.getCellFormula();
 						break;
 
 					default:
-						System.out.println("no matching enum date type found");
+						System.out.println("no matching enum type found");
 						break;
 					}
 				}
@@ -80,6 +94,88 @@ public class ExcelHelper {
 		}
 		return null;
 	}
+	
+	
+	public Object[][] getExcelData1(String excelLocation, String sheetName) throws Exception{
+		
+		FileInputStream fis;
+		fis = new FileInputStream(new File(excelLocation));
+		XSSFWorkbook workbook;
+		XSSFSheet sheet;
+		XSSFRow row;
+		XSSFCell cell;
+		
+		workbook = new XSSFWorkbook(fis);
+		int index = workbook.getSheetIndex(sheetName);
+		//System.out.println("sheet index is :" +index);
+		
+		sheet = workbook.getSheetAt(index);
+		
+		int totalRows = sheet.getLastRowNum();
+		System.out.println("Total Rows are :" +totalRows);
+		
+		row = sheet.getRow(0);
+		int totalColumn = row.getLastCellNum();
+		System.out.println("Total Columns are " + totalColumn);
+		
+		Object dataSets[][] = new String[totalRows][totalColumn];
+		
+		Iterator<Row> rowIterator =  sheet.rowIterator();
+		int i = 0;
+		while(rowIterator.hasNext()) {
+			i++;
+			Row rows = rowIterator.next();// assume it returns 0th row
+            if(rows.getRowNum()==0) {
+			rows = rowIterator.next();
+            }
+			Iterator<Cell> cellIterator = rows.cellIterator();
+			int j = 0;
+			System.out.println("");
+			while(cellIterator.hasNext()) {
+				j++;
+				Cell cells = cellIterator.next();
+				//System.out.print(cells.getCellTypeEnum() + " ");
+				switch(cells.getCellType()) {
+				case Cell.CELL_TYPE_STRING:
+					dataSets[i-1][j-1] = cells.getStringCellValue();
+					System.out.println(dataSets[i-1][j-1] + " ");
+					break;
+					
+				case Cell.CELL_TYPE_NUMERIC:
+					double mobile = cells.getNumericCellValue();
+					String mobileInStringFormat = BigDecimal.valueOf(mobile).toPlainString();
+					dataSets[i-1][j-1] = mobileInStringFormat;
+					System.out.println(dataSets[i-1][j-1]);
+					break;
+					
+				case Cell.CELL_TYPE_BOOLEAN:
+					dataSets[i-1][j-1] = cells.getBooleanCellValue();
+					break;
+					
+				case Cell.CELL_TYPE_FORMULA:
+					dataSets[i-1][j-1] = cells.getCellFormula();
+					break;
+					
+				default :
+					System.out.println("no matching enum type found");
+					break;	
+				}
+				
+				
+			}
+		}
+		return dataSets;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void updateResult(String excelLocation, String sheetName, String testCaseName, String testStatus){
 		try{

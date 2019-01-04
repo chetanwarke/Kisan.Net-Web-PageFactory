@@ -4,12 +4,15 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -62,8 +65,7 @@ public class WaitHelper {
 	 * @param timeOutInSeconds
 	 * @param pollingEveryInMiliSec
 	 */
-	public void WaitForElementVisibleWithPollingTime(WebElement element, int timeOutInSeconds,
-			int pollingEveryInMiliSec) {
+	public void WaitForElementVisibleWithPollingTime(WebElement element, int timeOutInSeconds, int pollingEveryInMiliSec) {
 		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
 		WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryInMiliSec);
 		wait.until(ExpectedConditions.visibilityOf(element));
@@ -123,7 +125,6 @@ public class WaitHelper {
 				.pollingEvery(Duration.ofMillis(pollingEveryInMiliSec)).ignoring(NoSuchElementException.class);
 		return fWait;
 	}
-	
 	/**
 	 * 
 	 * @param element
@@ -143,16 +144,76 @@ public class WaitHelper {
 	}
 	
 	/**
-	 * This method will make sure elementToBeClickable
+	 * This method will make sure elementToBeVisible
 	 * 
 	 * @param element
 	 * @param timeOutInSeconds
 	 */
-	public void waitForElement(WebElement element, int timeOutInSeconds) {
+	public void waitForElementVisible(WebElement element, int timeOutInSeconds) {
 		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
 		wait.until(ExpectedConditions.visibilityOf(element));
 		log.info("element is visible now");
 	}
+	
+	/**
+	 * This method will make sure elementToBeVisible
+	 * 
+	 * @param element
+	 * @param timeOutInSeconds
+	 */
+	
+	public void waitForAllElementVisible(WebElement element, int timeOutInSeconds) {
+		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		wait.until(ExpectedConditions.visibilityOfAllElements(element));
+		log.info("element is visible now");
+	}
 
+	/**
+	 * This method will make sure all elements are present
+	 * 
+	 * @param element
+	 * @param timeOutInSeconds
+	 */
+	public void waitForAllElement(By element, int timeOutInSeconds) {
+		log.info("waiting for :" + driver.findElement(element).toString() +"s" + " for :" + timeOutInSeconds + " seconds");
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(element));
+		log.info("elements are visible now");
+	}
+	
+	/**
+	 * This method will wait for loader to disappear
+	 * @return 
+	 * @throws Exception 
+	 * 
+	 */
+	/*public void waitForElementEnabled(WebElement element, int timeOutInSeconds) {
+		log.info("Waiting for :" + element.toString() + "to be enabled for" + timeOutInSeconds + "seconds");
+		if(!element.isEnabled()) {
+			WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+			wait.until(ExpectedConditions.);
+		}
+	}*/
+	
+	
+	/**
+	 * This method will wait for loader to disappear
+	 * @return 
+	 * @throws Exception 
+	 * 
+	 */
+	public void waitForLoaderToDisappear() throws Exception {
+		Thread.sleep(2000);
+		for(int i = 0; i<15; i++) {
+			try {
+				driver.findElement(By.xpath("//div[@class='loadingoverlay']"));
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				break;		
+			}			
+		}	
+	}
+	
 }

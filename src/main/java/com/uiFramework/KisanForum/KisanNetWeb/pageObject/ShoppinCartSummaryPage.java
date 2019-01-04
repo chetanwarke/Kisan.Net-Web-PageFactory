@@ -35,7 +35,7 @@ public class ShoppinCartSummaryPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		waitHelper.waitForElement(yourShoppingCart,ObjectReader.reader.getExplicitWait());
+		waitHelper.waitForElementVisible(yourShoppingCart,ObjectReader.reader.getExplicitWait());
 	}
 	
 	public boolean verifyProduct(String prod){

@@ -35,7 +35,7 @@ public class NavigationMenu {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		waitHelper.waitForElement(womenMenu, ObjectReader.reader.getExplicitWait());
+		waitHelper.waitForElementVisible(womenMenu, ObjectReader.reader.getExplicitWait());
 		TestBase.logExtentReport("NavigationMenu object created");
 		new TestBase().getNavigationScreen(driver);
 	}

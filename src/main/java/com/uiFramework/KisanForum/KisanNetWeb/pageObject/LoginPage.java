@@ -19,17 +19,17 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class LoginPage {
 
 	private WebDriver driver;
-	private final Logger log = LoggerHelper.getLogger(ShoppinCartSummaryPage.class);
+	private final Logger log = LoggerHelper.getLogger(LoginPage.class);
 	WaitHelper waitHelper;
 	
 	@FindBy(xpath ="//input[@type='tel']")
-	WebElement mobileNumberTextBox;
+	WebElement txtboxMobileNumber;
 	
 	@FindBy(xpath = "//button[starts-with(@id,'u_')]")
-	WebElement nextButton;
+	WebElement btnNext;
 	
 	@FindBy(xpath = "//div[contains(text(),'Verify your phone number')]/parent::div/following-sibling::div[1]")
-	WebElement closeButton;
+	WebElement btnClose;
 	
 	@FindBy(xpath = "//input[@type='tel']")
 	WebElement enterYourCode;
@@ -37,15 +37,27 @@ public class LoginPage {
 	@FindBy(xpath = "//button[contains(text(),'Continue')]")
 	WebElement continueButton;
 	
-	@FindBy(xpath = "/html/body/div[1]/iframe")
+	//@FindBy(xpath = "//*[@id=\"greenColorBody\"]/div[3]/iframe")
+	@FindBy(tagName = "iframe")
 	WebElement facebookLoginWindow;
+
+	@FindBy(xpath = "//a[contains(text(),'Exhibitor Login')]")
+	WebElement btnExhibitorLogin;
+	
+	@FindBy(id = "username")
+	WebElement txtBoxEmail;
+	
+	@FindBy(id = "password")
+	WebElement txtBoxPassword;
+	
+	@FindBy(xpath = "//input[@type='submit']")
+	WebElement btnLogin;
 	
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		//waitHelper.waitForElement(mobileNumberTextBox,ObjectReader.reader.getExplicitWait());
 		new TestBase().getNavigationScreen(driver);
 		TestBase.logExtentReport("Kisan.Net Login Page Object Created");
 	}
@@ -57,19 +69,24 @@ public class LoginPage {
 	public void switchToFacebookFrame() {
 		log.info("Switching to facebook login window");
 		logExtentReport("Switching to facebook login window");
+		/*List<WebElement> totalFrames = (List<WebElement>)driver.findElements(By.tagName("iframe"));
+		System.out.println(totalFrames.size());*/
+		/*WebElement fb = driver.findElement(By.xpath("//*[@id='greenColorBody']/div[3]/iframe"));
+		waitHelper.waitForframeToBeAvailableAndSwitchToIt(fb, 10);*/
 		waitHelper.waitForframeToBeAvailableAndSwitchToIt(facebookLoginWindow, 10);
+		System.out.println("Switched to facebook window");
 	}
 	
 	public void enterMobileNumber(String mobileNumber) {
 		log.info("entering mobile number...."+mobileNumber);
 		logExtentReport("entering mobile number...."+mobileNumber);
-		this.mobileNumberTextBox.sendKeys(mobileNumber);
+		this.txtboxMobileNumber.sendKeys(mobileNumber);
 	}
 	
 	public void clickOnNextButton() {
 		log.info("clicked on next button...");
 		logExtentReport("clicked on next button...");
-		nextButton.click();
+		btnNext.click();
 	}
 	
 	public void clickOnContinueButton() {
@@ -80,11 +97,50 @@ public class LoginPage {
 	}
 	
 	public void clickOnCloseButton() {
-		log.info("Closed the visitor login popup");
-		logExtentReport("Closed the visitor login popup");
-		List<WebElement> closeBtn = (List<WebElement>) closeButton;
-		closeBtn.get(2).click();
+		log.info("Closing visitor login popup");
+		logExtentReport("Closing the visitor login popup");
+		waitHelper.WaitForElementClickable(btnClose, 5);
+		btnClose.click();
+		driver.switchTo().defaultContent();
 	}
 	
+	public void clickOnExhibitorLoginButton() {
+		log.info("clicking on exhibitor login button...");
+		logExtentReport("clicking on exhibitor login button...");
+		waitHelper.WaitForElementClickable(btnExhibitorLogin, 40);
+		btnExhibitorLogin.click();
+	}
 	
+	public void enterEmailId(String emailId) {
+		log.info("entering email id...."+emailId);
+		logExtentReport("entering email id...."+emailId);
+		waitHelper.waitForElementVisible(txtBoxEmail, 10);
+		this.txtBoxEmail.click();
+		this.txtBoxEmail.sendKeys(emailId);
+	}
+	
+	public void enterPassword(String password) {
+		log.info("entering password...."+password);
+		logExtentReport("entering password...."+password);
+		waitHelper.waitForElementVisible(txtBoxPassword, 10);
+		this.txtBoxPassword.click();
+		this.txtBoxPassword.sendKeys(password);
+	}
+	
+	public void clickOnLoginButton() throws Exception {
+		log.info("clicked on login button...");
+		logExtentReport("clicked on login button...");
+		waitHelper.WaitForElementClickable(btnLogin, 40);
+		btnLogin.click();
+	}
+	
+	public void loginToApp(String emailId, String password) throws Exception {
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.switchToFacebookFrame();
+		loginPage.clickOnCloseButton();
+		loginPage.clickOnExhibitorLoginButton();
+		loginPage.enterEmailId(emailId);
+		loginPage.enterPassword(password);
+		loginPage.clickOnLoginButton();
+	}
 }

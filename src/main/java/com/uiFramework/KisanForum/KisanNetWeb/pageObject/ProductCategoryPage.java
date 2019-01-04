@@ -57,7 +57,7 @@ public class ProductCategoryPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		waitHelper.waitForElement(catalogTextObj,ObjectReader.reader.getExplicitWait());
+		waitHelper.waitForElementVisible(catalogTextObj,ObjectReader.reader.getExplicitWait());
 		TestBase.logExtentReport("ProductCategoryPage object creatd...");
 		new TestBase().getNavigationScreen(driver);
 	}

@@ -23,7 +23,7 @@ public class WelcomeExhibitor {
 	public WelcomeExhibitor(WebDriver driver) {
 		this.driver = driver;
 		waitHelper = new WaitHelper(driver);
-		waitHelper.waitForElement(driver.findElement(backButton),ObjectReader.reader.getExplicitWait());
+		waitHelper.waitForElementVisible(driver.findElement(backButton),ObjectReader.reader.getExplicitWait());
 		new TestBase().getNavigationScreen(driver);
 		TestBase.logExtentReport("Welcome Exhibitor Page Object Created");
 	}
@@ -35,7 +35,7 @@ public class WelcomeExhibitor {
 	public void clickOnskipButton() {
 		log.info("clicked on skip button...");
 		logExtentReport("clicked on skip button...");
-		waitHelper.waitForElement(driver.findElement(skipButton), 10);
+		waitHelper.waitForElementVisible(driver.findElement(skipButton), 10);
 		driver.findElement(skipButton).click();
 	}
 	

@@ -3,15 +3,17 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.LoginTest">
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="afterTest"/>
           <include name="beforeSuite"/>
-          <include name="loginToApp"/>
+          <include name="inviteToFollowChannelWithValidNumber" invocation-numbers="0"/>
+          <include name="beforeClass"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.LoginTest -->
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

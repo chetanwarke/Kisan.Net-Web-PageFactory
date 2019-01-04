@@ -57,7 +57,7 @@ public class LoginPageBhanu{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		waitHelper.waitForElement(signin,ObjectReader.reader.getExplicitWait());
+		waitHelper.waitForElementVisible(signin,ObjectReader.reader.getExplicitWait());
 		new TestBase().getNavigationScreen(driver);
 		TestBase.logExtentReport("Login Page Object Created");
 	}
@@ -115,7 +115,7 @@ public class LoginPageBhanu{
 	public void logout(){
 		logout.click();
 		log.info("clicked on logout link");
-		waitHelper.waitForElement(signin, ObjectReader.reader.getExplicitWait());
+		waitHelper.waitForElementVisible(signin, ObjectReader.reader.getExplicitWait());
 	}
 	
 	public void logExtentReport(String s1){

@@ -18,6 +18,7 @@ public class FirefoxBrowser {
 		FirefoxProfile profile = new FirefoxProfile();
 		profile.setAcceptUntrustedCertificates(true);
 		profile.setAssumeUntrustedCertificateIssuer(true);
+		profile.setPreference("permissions.default.desktop-notification", 1);
 		
 		firefox.setCapability(FirefoxDriver.PROFILE, profile);
 		firefox.setCapability("marionette", true);
@@ -36,7 +37,7 @@ public class FirefoxBrowser {
 			System.setProperty("webdriver.gecko.driver",ResourceHelper.getResourcePath("src/main/resources/drivers/geckodriver"));
 			return new FirefoxDriver(cap);
 		} else if (System.getProperty("os.name").contains("Window")) {
-			System.setProperty("webdriver.gecko.driver",ResourceHelper.getResourcePath("src/main/resources/drivers/geckodriver.exe"));
+			System.setProperty("webdriver.gecko.driver",ResourceHelper.getResourcePath("src/main/resources/drivers/geckodriver1.exe"));
 			return new FirefoxDriver(cap);
 		} else if (System.getProperty("os.name").contains("Linux")) {
 			System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
