@@ -10,7 +10,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
-import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPageBhanu;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class LoginTest extends TestBase{

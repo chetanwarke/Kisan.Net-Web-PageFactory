@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AppDownloadInvite">
+    
+  <test name="AppDownloadValidInvite">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToValidNumber"/>   
+    </classes>
+  </test> <!-- AppDownloadInvite -->
+
+ 
+  <test name="AppDownloadInvalidInvite">
+    <classes>
+ 	  <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber"/>
+    </classes>
+  </test> <!-- AppDownloadInvite -->
+  
+    <test name="AppDownloadBlankNumberInvite">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToBlankNumber"/>
+    </classes>
+  </test> <!-- AppDownloadInvite -->
+  
+</suite> <!-- AppDownloadInvite -->

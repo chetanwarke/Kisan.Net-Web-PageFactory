@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -13,10 +14,12 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 
@@ -69,6 +72,15 @@ public class WaitHelper {
 		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
 		WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryInMiliSec);
 		wait.until(ExpectedConditions.visibilityOf(element));
+		log.info("element is visible now");
+	}
+	
+	
+	public void WaitForElementInVisibleWithPollingTime(WebElement element, int timeOutInSeconds, int pollingEveryInMiliSec) {
+		//log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
+		WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryInMiliSec);
+		wait.until(ExpectedConditions.invisibilityOf(element));
+		//wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loadingoverlay']")));
 		log.info("element is visible now");
 	}
 
@@ -138,7 +150,7 @@ public class WaitHelper {
 	}
 	
 	public void pageLoadTime(long timeout, TimeUnit unit){
-		log.info("waiting for page to load for : "+ unit+ " seconds");
+		log.info("waiting for page to load for : "+ timeout+ " seconds");
 		driver.manage().timeouts().pageLoadTimeout(timeout, unit);
 		log.info("page is loaded");
 	}
@@ -204,16 +216,55 @@ public class WaitHelper {
 	 * @throws Exception 
 	 * 
 	 */
-	public void waitForLoaderToDisappear() throws Exception {
-		Thread.sleep(2000);
-		for(int i = 0; i<15; i++) {
-			try {
-				driver.findElement(By.xpath("//div[@class='loadingoverlay']"));
-				Thread.sleep(1000);
-			} catch (Exception e) {
-				break;		
-			}			
-		}	
+	public Boolean WaitForElementDisapper(WebElement element)
+    {
+        try
+        {
+            while (true)
+            {
+                if (element.isDisplayed()) {
+                        Thread.sleep(2000);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return true;
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return false;
+        }
+    }
+		
+	
+	public void waitForStalenessOfElement(WebElement element, int timeOutInSeconds) {
+		log.info("waiting for :" + element.toString() + " for :" + timeOutInSeconds + " seconds");
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		wait.until(ExpectedConditions.stalenessOf(element));
+		log.info("element is visible now");
 	}
 	
+	/**
+	 * this method will wait for page to be loaded by using javascript
+	 */
+	
+	public void javaScriptWait(int timeOutInSeconds) {
+		ExpectedCondition<Boolean> javaScriptWait = new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver input) {	
+				return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+			}
+		};
+		
+		try {
+			System.out.println("Waiting for page to load");
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+			wait.until(javaScriptWait);
+		} catch(Throwable error) {
+			System.out.println("Timeout waiting for Page Load Request to complete after" + 20 + "seconds");
+			Assert.assertFalse(true, "Timeout waiting for Page Load Request to complete");
+		}
+	}
 }

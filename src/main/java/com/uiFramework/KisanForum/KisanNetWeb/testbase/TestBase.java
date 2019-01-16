@@ -38,9 +38,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.resource.ResourceHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
-import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPageBhanu;
-import com.uiFramework.KisanForum.KisanNetWeb.pageObject.NavigationMenu;
-import com.uiFramework.KisanForum.KisanNetWeb.pageObject.RegistrationPage;
 import com.uiFramework.KisanForum.KisanNetWeb.utils.ExtentManager;
 
 public class TestBase {
@@ -60,7 +57,7 @@ public class TestBase {
 	public void beforeTest() throws Exception{
 		ObjectReader.reader = new PropertyReader();
 		reportDirectery = new File(ResourceHelper.getResourcePath("src/main/resources/screenShots"));
-		setUpDriver(ObjectReader.reader .getBrowserType());
+		setUpDriver(ObjectReader.reader.getBrowserType());
 		test = extent.createTest(getClass().getSimpleName());
 	}
 	

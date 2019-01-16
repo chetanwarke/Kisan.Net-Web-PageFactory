@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
@@ -21,9 +22,13 @@ public class LoginPage {
 	private WebDriver driver;
 	private final Logger log = LoggerHelper.getLogger(LoginPage.class);
 	WaitHelper waitHelper;
+	VerificationHelper verificationHelper;
 	
 	@FindBy(xpath ="//input[@type='tel']")
 	WebElement txtboxMobileNumber;
+	
+	@FindBy(xpath = "//input[@ng-reflect-placeholder='Your Number']")
+	WebElement yourNumberTextBox;
 	
 	@FindBy(xpath = "//button[starts-with(@id,'u_')]")
 	WebElement btnNext;
@@ -58,6 +63,7 @@ public class LoginPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
+		verificationHelper = new VerificationHelper(driver);
 		new TestBase().getNavigationScreen(driver);
 		TestBase.logExtentReport("Kisan.Net Login Page Object Created");
 	}
@@ -69,10 +75,10 @@ public class LoginPage {
 	public void switchToFacebookFrame() {
 		log.info("Switching to facebook login window");
 		logExtentReport("Switching to facebook login window");
-		/*List<WebElement> totalFrames = (List<WebElement>)driver.findElements(By.tagName("iframe"));
-		System.out.println(totalFrames.size());*/
-		/*WebElement fb = driver.findElement(By.xpath("//*[@id='greenColorBody']/div[3]/iframe"));
-		waitHelper.waitForframeToBeAvailableAndSwitchToIt(fb, 10);*/
+		/*boolean yourNumber = verificationHelper.isDisplayed(yourNumberTextBox);
+		if(yourNumber==true) {
+			yourNumberTextBox.click();
+		}*/
 		waitHelper.waitForframeToBeAvailableAndSwitchToIt(facebookLoginWindow, 10);
 		System.out.println("Switched to facebook window");
 	}
