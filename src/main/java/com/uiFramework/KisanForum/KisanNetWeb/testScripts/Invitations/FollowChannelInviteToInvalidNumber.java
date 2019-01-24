@@ -19,7 +19,7 @@ public class FollowChannelInviteToInvalidNumber extends TestBase {
 private final Logger log = LoggerHelper.getLogger(FollowChannelInviteToValidNumber.class);
 	
 	@Test(dataProvider="get invite list",description="Invite to follow channel with valid number")
-	public void inviteToFollowChannelWithValidNumber(String emailId, String password, String channelName, String mobileNumber, String runMode) throws Exception {
+	public void inviteToFollowChannelWithInvalidNumber(String emailId, String password, String channelName, String mobileNumber, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N ");
 		}

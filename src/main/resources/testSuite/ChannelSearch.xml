@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ChannelSearch">
+    
+    <listeners>
+        <listener class-name="com.uiFramework.KisanForum.KisanNetWeb.helper.listener.RetryListener"></listener>
+    </listeners>
+
+	<test name="SearchNonExistingChannelOnDiscoverPage">
+		<classes>
+			<class
+				name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage" />
+		</classes>
+	</test> <!-- ChannelSearch -->
+
+
+	
+	
+  
+</suite> <!-- ChannelSearch -->

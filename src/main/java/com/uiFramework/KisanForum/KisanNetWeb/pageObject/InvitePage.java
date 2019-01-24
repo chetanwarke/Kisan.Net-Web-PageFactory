@@ -62,7 +62,7 @@ public class InvitePage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		new TestBase().getNavigationScreen(driver);
+		new TestBase().getNavigationScreen("InvitePage",driver);
 		TestBase.logExtentReport("Invite page object created");	
 	}
 	
@@ -149,10 +149,14 @@ public class InvitePage {
 	}
 	
 	public boolean verifyInviteSuccessToast() {
+		log.info("Verifying invite success toast");
+		logExtentReport("Verifying invite success toast");
 		return new VerificationHelper(driver).isDisplayed(successToast);
 	}
 
 	public boolean verifyMobileValidationMessage() {
+		log.info("Verifying mobile validation message");
+		logExtentReport("Verifying mobile validation message");
 		return new VerificationHelper(driver).isDisplayed(mobileValidationError);
 	}
 }

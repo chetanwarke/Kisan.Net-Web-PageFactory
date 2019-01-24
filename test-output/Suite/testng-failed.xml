@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeSuite"/>
+          <include name="searchNonExistingChannelOnHomePage"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage">
+        <methods>
+          <include name="searchNonExistingChannelOnDiscoverPage"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage">
+        <methods>
+          <include name="searchExistingChannelOnDiscoverPage"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage">
+        <methods>
+          <include name="searchExistingChannelOnHomePage"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

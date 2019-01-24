@@ -16,7 +16,7 @@ public class verifyTitle extends TestBase{
 	private final Logger log = LoggerHelper.getLogger(verifyTitle.class);
 	
 	@Test(dataProvider="get login data", description = "Verify the title of home page")
-	public void verifyTitle(String emailId, String password, String runMode) throws Exception {
+	public void verifyTitleOfPage(String emailId, String password, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run Mode for this test case is marked as N");
 		}

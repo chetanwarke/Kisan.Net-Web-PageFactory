@@ -24,8 +24,7 @@ private final Logger log = LoggerHelper.getLogger(SearchNonExistingChannelOnHome
 			else {
 				throw new SkipException("This channel is already existing");
 			}
-		}
-		
+		}	
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginToApp(emailId, password);
 		
@@ -33,6 +32,7 @@ private final Logger log = LoggerHelper.getLogger(SearchNonExistingChannelOnHome
 		homePage.clickOnRightOptionMenu();
 		homePage.clickOnSearchButton();
 		homePage.enterChannelNameInSearchBox(channelName);
+	
 		boolean status = homePage.verifyNoChannelsFoundToast();
 		AssertionHelper.updateTestStatus(status);
 	}

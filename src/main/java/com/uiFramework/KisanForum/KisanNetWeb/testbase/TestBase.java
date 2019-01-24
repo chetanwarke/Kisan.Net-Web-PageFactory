@@ -163,10 +163,10 @@ public class TestBase {
 	}
 
 	
-	public void getNavigationScreen(WebDriver driver) {
+	public void getNavigationScreen(String page,WebDriver driver) {
 		log.info("capturing ui navigation screen...");
 		new JavaScriptHelper(driver).zoomInBy60Percentage();
-		 String screen = captureScreen("", driver);
+		 String screen = captureScreen(page, driver);
 		 new JavaScriptHelper(driver).zoomInBy100Percentage();
 		 try {
 			test.addScreenCaptureFromPath(screen);

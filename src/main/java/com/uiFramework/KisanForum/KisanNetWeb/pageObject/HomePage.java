@@ -14,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
@@ -64,8 +65,8 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
 		verificationHelper = new VerificationHelper(driver);
-		new TestBase().getNavigationScreen(driver);
 		TestBase.logExtentReport("Home Page Object Created");
+		new TestBase().getNavigationScreen("Homepage",driver);
 	}
 	
 	public void logExtentReport(String s1){
@@ -97,6 +98,7 @@ public class HomePage {
 	public void clickOnLeftDrawerIcon() {
 		log.info("Clicking on left drawer");
 		logExtentReport("Clicking on left drawer");
+		waitHelper.waitForAllElement(allChannelList, ObjectReader.reader.getExplicitWait());
 		waitHelper.WaitForElementClickable(leftDrawerIcon, 15);
 		leftDrawerIcon.click();
 	}

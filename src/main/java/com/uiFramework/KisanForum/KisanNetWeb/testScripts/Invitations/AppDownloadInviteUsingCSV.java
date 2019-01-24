@@ -21,7 +21,7 @@ private final Logger log = LoggerHelper.getLogger(AppDownloadInviteUsingCSV.clas
 public fileUploadHelper fileUpload = new fileUploadHelper();
 	
 	@Test(dataProvider = "getInviteList",description = "Invite to download app with CSV")
-	public void inviteManuallyToValidNumber(String emailId, String password, String mobileNumber, String runMode) throws Exception {
+	public void inviteByCSVToValidNumber(String emailId, String password, String mobileNumber, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
 		}

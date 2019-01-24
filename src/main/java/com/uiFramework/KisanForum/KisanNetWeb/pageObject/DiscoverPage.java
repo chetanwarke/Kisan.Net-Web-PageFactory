@@ -47,13 +47,22 @@ public class DiscoverPage {
 	@FindAll(@FindBy(xpath = "//h4[@class='mrgn-t-md']"))
 	List<WebElement> channelList;
 	
+	@FindBy(xpath = "//div[@id='toast-container']")
+	WebElement noChannelsFoundToast;
+	
+	@FindAll(@FindBy(xpath = "//mat-card-actions[@class='mrgn-b-none pad-b-md mat-card-actions']"))
+	List<WebElement> followButtonList;		
+	
+	@FindBy(xpath = "//div[@aria-label='Channel Followed successfully.']")
+	WebElement channelFollowedToast;
+	
 	
 	public DiscoverPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver,this);
 		waitHelper = new WaitHelper(driver);
 		verificationHelper = new VerificationHelper(driver);
-		new TestBase().getNavigationScreen(driver);
+		new TestBase().getNavigationScreen("DiscoverPage",driver);
 		TestBase.logExtentReport("Discover page object created");
 	}
 	
@@ -62,12 +71,21 @@ public class DiscoverPage {
 	}
 
 	
-	public void clickOnGotItButton() {
+	public void clickOnGotItButton() throws Exception {
 		log.info("Clicking on Got It button");
 		logExtentReport("Clicking on Got It button");
 		boolean isGotItButtonPresent = verifyGotItButton();
+		boolean isLoaderPresent = false;
 		if(isGotItButtonPresent) {
-			btnGotIt.click();
+			isLoaderPresent = verificationHelper.isDisplayed(lodingOverlay);
+			if(isLoaderPresent) {
+				Thread.sleep(8000);
+				btnGotIt.click();
+			}
+			else {
+				btnGotIt.click();
+			}
+			
 		}
 		else {
 		System.out.println("Got it button is not present");
@@ -95,10 +113,9 @@ public class DiscoverPage {
 		btnClose.click();
 	}
 	
-	public void clickOnSearchButton() {
+	public void clickOnSearchButton() throws Exception {
 		log.info("Clicking on search button");
 		logExtentReport("Clicking on search button");
-		waitHelper.WaitForElementInVisibleWithPollingTime(lodingOverlay, 5, 1000);
 		waitHelper.WaitForElementClickable(btnSearch, ObjectReader.reader.getExplicitWait());
 		btnSearch.click();
 	}
@@ -136,5 +153,48 @@ public class DiscoverPage {
 
 	public List<WebElement> getChannelList() {
 		return channelList;
+	}
+	
+	public boolean verifyNoChannelsFoundToast() {
+		return new VerificationHelper(driver).isDisplayed(noChannelsFoundToast);
+	}
+	
+	public int getChannelId(String channelName) {
+		List<WebElement> channelList = getChannelList();
+		boolean presenceOfChannel = false;
+		int i;
+		for(i=0; i<channelList.size(); i++) {
+			if(channelList.get(i).getText().equals(channelName)) {
+				presenceOfChannel = true;
+				break;
+			}
+			else {
+				presenceOfChannel = false;
+			}
+		}
+		return i;
+	}
+	
+	public void clickOnChannelName(String channelName) {
+		List<WebElement> channelList = getChannelList();
+		int i;
+		for(i=0; i<channelList.size(); i++) {
+			if(channelList.get(i).getText().equals(channelName)) {
+				channelList.get(i).click();
+				break;
+			}
+			else {
+				continue;
+			}
+		}
+	}
+	
+	public void clickOnFollowButton(String channelName) {
+		int i = getChannelId(channelName);
+		followButtonList.get(i).click();
+	}
+	
+	public boolean verifyChannelFollowedToast() {
+		return new VerificationHelper(driver).isDisplayed(channelFollowedToast);
 	}
 }

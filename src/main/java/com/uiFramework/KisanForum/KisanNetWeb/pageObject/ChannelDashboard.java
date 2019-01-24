@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
@@ -30,7 +31,7 @@ public class ChannelDashboard {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		new TestBase().getNavigationScreen(driver);
+		new TestBase().getNavigationScreen("ChannelDashboard",driver);
 		TestBase.logExtentReport("Channel Chat Window Page Object Created");
 	}
 	
@@ -41,7 +42,7 @@ public class ChannelDashboard {
 	public void clickOnChannelNameInHeader() {
 		log.info("Clicking on channel name in header");
 		logExtentReport("Clicking on channel name in header");
-		waitHelper.waitForElementVisible(channelNameInHeader, 10);
+		waitHelper.waitForElementVisible(channelNameInHeader, ObjectReader.reader.getExplicitWait());
 		channelNameInHeader.click();
 	}
 	

@@ -195,20 +195,6 @@ public class WaitHelper {
 		log.info("elements are visible now");
 	}
 	
-	/**
-	 * This method will wait for loader to disappear
-	 * @return 
-	 * @throws Exception 
-	 * 
-	 */
-	/*public void waitForElementEnabled(WebElement element, int timeOutInSeconds) {
-		log.info("Waiting for :" + element.toString() + "to be enabled for" + timeOutInSeconds + "seconds");
-		if(!element.isEnabled()) {
-			WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
-			wait.until(ExpectedConditions.);
-		}
-	}*/
-	
 	
 	/**
 	 * This method will wait for loader to disappear
@@ -218,15 +204,19 @@ public class WaitHelper {
 	 */
 	public Boolean WaitForElementDisapper(WebElement element)
     {
+		int maxWaitTime = 2000;
         try
         {
             while (true)
             {
-                if (element.isDisplayed()) {
-                        Thread.sleep(2000);
+                if (element.isDisplayed() && maxWaitTime<30000) {
+                	System.out.println("Waiting for " +element.toString() +"for 2 seconds");
+                    Thread.sleep(2000);
+                    maxWaitTime = maxWaitTime + 2000;
                 }
                 else
                 {
+                	log.info("Element " +element.toString() +" is taking more than 30 seconds to laod");
                     break;
                 }
             }

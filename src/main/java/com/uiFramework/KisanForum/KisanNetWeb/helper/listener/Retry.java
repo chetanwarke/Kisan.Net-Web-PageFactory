@@ -14,9 +14,15 @@ public class Retry implements IRetryAnalyzer{
 
 	public boolean retry(ITestResult arg0) {
 		if(retryCount < maxRetryCount){
-			log.info("Retrying test "+arg0.getName()+" with status "+getResultStatusName(arg0.getStatus())+" for the " +(retryCount+1)+" times." );
-			retryCount++;
-			return true;
+			try {
+				Thread.sleep(3000);
+				log.info("Retrying test "+arg0.getName()+" with status "+getResultStatusName(arg0.getStatus())+" for the " +(retryCount+1)+" times." );
+				retryCount++;
+				return true;
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
 		}
 		return false;
 	}

@@ -64,7 +64,7 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
 		verificationHelper = new VerificationHelper(driver);
-		new TestBase().getNavigationScreen(driver);
+		new TestBase().getNavigationScreen("LoginPage",driver);
 		TestBase.logExtentReport("Kisan.Net Login Page Object Created");
 	}
 	
