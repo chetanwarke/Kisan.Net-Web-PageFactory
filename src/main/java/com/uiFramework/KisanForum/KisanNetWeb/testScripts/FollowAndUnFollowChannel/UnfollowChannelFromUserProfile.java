@@ -5,7 +5,9 @@ import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
@@ -30,7 +32,17 @@ public class UnfollowChannelFromUserProfile extends TestBase{
 		
 		LeftDrawer leftDrawer = new LeftDrawer(driver);
 		leftDrawer.clickOnUserProfileImage();
+		leftDrawer.clickOnViewAllButton();
+		leftDrawer.clickOnChannelName(channelName);
+		leftDrawer.clickOnChannelProfileButton();
 		
+		ChannelProfile channelProfile = new ChannelProfile(driver);
+		channelProfile.clickOnRightOptionMenu();
+		channelProfile.clickOnUnfollowChannelOption();
+		channelProfile.clickOnYesButtonOnPopup();
+		
+		boolean status = channelProfile.verifyChannelUnfollowedToast();
+		AssertionHelper.updateTestStatus(status);
 	}
 	
 	
