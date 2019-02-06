@@ -57,6 +57,8 @@ public class LeftDrawer {
 	@FindBy(xpath = "//button[contains(text(),'No')]")
 	WebElement btnNoOnPopup;
 	
+	@FindBy(xpath = "//span[contains(text(),'Discover')]")
+	WebElement optionDiscover;
 	
 	public static By allChannelList = By.xpath("//h3[@class='font-bold-five mat-line']");
 
@@ -173,5 +175,17 @@ public class LeftDrawer {
 		logExtentReport("Clicking on No button on popup");
 		waitHelper.waitForElementVisible(btnNoOnPopup, ObjectReader.reader.getExplicitWait());
 		btnNoOnPopup.click();
+	}
+	
+	public void clickOnDiscoverOption() {
+		log.info("Clicking on discover option");
+		logExtentReport("Clicking on discover option");
+		waitHelper.WaitForElementClickable(optionDiscover, ObjectReader.reader.getExplicitWait());
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			optionDiscover.click();
+		}
+		else {
+			log.info("Left drawer is still loading");
+		}
 	}
 }
