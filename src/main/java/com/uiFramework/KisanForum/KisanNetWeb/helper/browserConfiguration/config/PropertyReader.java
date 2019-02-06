@@ -44,13 +44,20 @@ public class PropertyReader implements ConfigReader {
 		return BrowserType.valueOf(OR.getProperty("browserType"));
 	}
 
-	public String getUrl() {
+	public String getExhibitorLoginUrl() {
 		if(System.getProperty("url")!=null){
 			return System.getProperty("url");
 		}
-		return OR.getProperty("applicationUrl");
+		return OR.getProperty("applicationUrlExhibitor");
 	}
 
+	public String getLoginUrl() {
+		if(System.getProperty("applicationUrl")!=null){
+			return System.getProperty("applicationUrl");
+		}
+		return OR.getProperty("applicationUrl");
+	}
+	
 	public String getUserName() {
 		if(System.getProperty("userName")!=null){
 			return System.getProperty("userName");
@@ -141,6 +148,7 @@ public class PropertyReader implements ConfigReader {
 		}
 		return OR.getProperty("promocode");
 	}
+
 	
 
 }

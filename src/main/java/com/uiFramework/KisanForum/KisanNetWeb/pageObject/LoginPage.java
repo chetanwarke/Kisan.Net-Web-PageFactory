@@ -142,9 +142,9 @@ public class LoginPage {
 	
 	public void loginToApp(String emailId, String password) throws Exception {
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.switchToFacebookFrame();
+		/*loginPage.switchToFacebookFrame();
 		loginPage.clickOnCloseButton();
-		loginPage.clickOnExhibitorLoginButton();
+		loginPage.clickOnExhibitorLoginButton();*/
 		loginPage.enterEmailId(emailId);
 		loginPage.enterPassword(password);
 		loginPage.clickOnLoginButton();

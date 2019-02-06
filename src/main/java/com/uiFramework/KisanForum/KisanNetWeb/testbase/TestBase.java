@@ -64,7 +64,7 @@ public class TestBase {
 	@BeforeClass
 	public void beforeClass() {
 		driver.manage().deleteAllCookies();
-		getApplicationUrl(ObjectReader.reader.getUrl());
+		getApplicationUrl(ObjectReader.reader.getExhibitorLoginUrl());
 	}
 	
 	@BeforeMethod

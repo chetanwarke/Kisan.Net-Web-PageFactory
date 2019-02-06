@@ -5,53 +5,50 @@
       <![CDATA[captureScreen method called]]>
     </line>
     <line>
-      <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_23_01_2019_06_30_37.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_23_01_2019_06_30_37.png'height='100' width='100'/></a>]]>
+      <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_17.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_17.png'height='100' width='100'/></a>]]>
     </line>
     <line>
       <![CDATA[captureScreen method called]]>
     </line>
     <line>
-      <![CDATA[captureScreen method called]]>
-    </line>
-    <line>
-      <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_23_01_2019_06_30_41.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_23_01_2019_06_30_41.png'height='100' width='100'/></a>]]>
+      <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_19.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_19.png'height='100' width='100'/></a>]]>
     </line>
     <line>
       <![CDATA[captureScreen method called]]>
     </line>
     <line>
-      <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LeftDrawer_23_01_2019_06_30_53.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LeftDrawer_23_01_2019_06_30_53.png'height='100' width='100'/></a>]]>
+      <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_06_02_2019_02_12_39.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_06_02_2019_02_12_39.png'height='100' width='100'/></a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70426" started-at="2019-01-23T13:00:26Z" finished-at="2019-01-23T13:01:37Z">
+  <suite name="Default suite" duration-ms="118156" started-at="2019-02-06T08:42:05Z" finished-at="2019-02-06T08:44:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="70426" started-at="2019-01-23T13:00:26Z" finished-at="2019-01-23T13:01:37Z">
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23]" name="beforeSuite" is-config="true" duration-ms="182" started-at="2019-01-23T18:30:26Z" finished-at="2019-01-23T18:30:26Z">
+    <test name="Default test" duration-ms="118156" started-at="2019-02-06T08:42:05Z" finished-at="2019-02-06T08:44:04Z">
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23]" name="beforeSuite" is-config="true" duration-ms="172" started-at="2019-02-06T14:12:05Z" finished-at="2019-02-06T14:12:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23]" name="beforeTest" is-config="true" duration-ms="4147" started-at="2019-01-23T18:30:26Z" finished-at="2019-01-23T18:30:30Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23]" name="beforeTest" is-config="true" duration-ms="4037" started-at="2019-02-06T14:12:05Z" finished-at="2019-02-06T14:12:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23]" name="beforeClass" is-config="true" duration-ms="5412" started-at="2019-01-23T18:30:30Z" finished-at="2019-01-23T18:30:36Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23]" name="beforeClass" is-config="true" duration-ms="7034" started-at="2019-02-06T14:12:09Z" finished-at="2019-02-06T14:12:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-23T18:30:36Z" finished-at="2019-01-23T18:30:36Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-02-06T14:12:17Z" finished-at="2019-02-06T14:12:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile.unfollowChannelFromUserProfile(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception]]>
+                <![CDATA[public void com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout.logoutFromApp(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="unfollowChannelFromUserProfile(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23]" name="unfollowChannelFromUserProfile" duration-ms="54373" started-at="2019-01-23T18:30:36Z" data-provider="Channel To Be Unfollowed" finished-at="2019-01-23T18:31:31Z">
+        <test-method status="PASS" signature="logoutFromApp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23]" name="logoutFromApp" duration-ms="101152" started-at="2019-02-06T14:12:17Z" description="Login to App" data-provider="testData" finished-at="2019-02-06T14:13:58Z">
           <params>
             <param index="0">
               <value>
@@ -65,11 +62,6 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[FCI Magazine]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
                 <![CDATA[Y]]>
               </value>
             </param>
@@ -79,41 +71,38 @@
               <![CDATA[captureScreen method called]]>
             </line>
             <line>
-              <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_23_01_2019_06_30_37.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_23_01_2019_06_30_37.png'height='100' width='100'/></a>]]>
+              <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_17.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_17.png'height='100' width='100'/></a>]]>
             </line>
             <line>
               <![CDATA[captureScreen method called]]>
             </line>
             <line>
-              <![CDATA[captureScreen method called]]>
-            </line>
-            <line>
-              <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_23_01_2019_06_30_41.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_23_01_2019_06_30_41.png'height='100' width='100'/></a>]]>
+              <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_19.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_06_02_2019_02_12_19.png'height='100' width='100'/></a>]]>
             </line>
             <line>
               <![CDATA[captureScreen method called]]>
             </line>
             <line>
-              <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LeftDrawer_23_01_2019_06_30_53.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LeftDrawer_23_01_2019_06_30_53.png'height='100' width='100'/></a>]]>
+              <![CDATA[<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_06_02_2019_02_12_39.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_06_02_2019_02_12_39.png'height='100' width='100'/></a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- unfollowChannelFromUserProfile -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23]" name="afterMethod" is-config="true" duration-ms="4461" started-at="2019-01-23T18:31:31Z" finished-at="2019-01-23T18:31:35Z">
+        </test-method> <!-- logoutFromApp -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23]" name="afterMethod" is-config="true" duration-ms="4390" started-at="2019-02-06T14:13:58Z" finished-at="2019-02-06T14:14:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=unfollowChannelFromUserProfile status=SUCCESS method=UnfollowChannelFromUserProfile.unfollowChannelFromUserProfile(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23] output=captureScreen method called]]]>
+                <![CDATA[[TestResult name=logoutFromApp status=SUCCESS method=Logout.logoutFromApp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23] output=captureScreen method called]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3327bd23]" name="afterTest" is-config="true" duration-ms="1232" started-at="2019-01-23T18:31:35Z" finished-at="2019-01-23T18:31:37Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout@3327bd23]" name="afterTest" is-config="true" duration-ms="708" started-at="2019-02-06T14:14:03Z" finished-at="2019-02-06T14:14:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile -->
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

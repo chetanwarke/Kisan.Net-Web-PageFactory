@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile">
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="logoutFromApp" invocation-numbers="0"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
-          <include name="unfollowChannelFromUserProfile" invocation-numbers="0"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile -->
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
