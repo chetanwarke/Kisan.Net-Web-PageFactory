@@ -60,6 +60,9 @@ public class LeftDrawer {
 	@FindBy(xpath = "//span[contains(text(),'Discover')]")
 	WebElement optionDiscover;
 	
+	@FindBy(xpath = "//span[contains(text(),'My Channel')]")
+	WebElement optionMyChannel;
+	
 	public static By allChannelList = By.xpath("//h3[@class='font-bold-five mat-line']");
 
 	
@@ -148,7 +151,6 @@ public class LeftDrawer {
 		else {
 			log.info("Left drawer is still loading");
 		}
-		//optionSupport.click();
 	}
 	
 	public void clickOnLogoutOption() {
@@ -183,6 +185,18 @@ public class LeftDrawer {
 		waitHelper.WaitForElementClickable(optionDiscover, ObjectReader.reader.getExplicitWait());
 		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
 			optionDiscover.click();
+		}
+		else {
+			log.info("Left drawer is still loading");
+		}
+	}
+	
+	public void clickOnMyChannelOption() {
+		log.info("Clicking on my channel option");
+		logExtentReport("Clicking on my channel option");
+		waitHelper.WaitForElementClickable(optionMyChannel, ObjectReader.reader.getExplicitWait());
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			optionMyChannel.click();
 		}
 		else {
 			log.info("Left drawer is still loading");

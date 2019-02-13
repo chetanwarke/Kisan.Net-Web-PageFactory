@@ -32,7 +32,7 @@ public class ChannelDashboard {
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
 		new TestBase().getNavigationScreen("ChannelDashboard",driver);
-		TestBase.logExtentReport("Channel Chat Window Page Object Created");
+		TestBase.logExtentReport("Channel Dashboard Page Object Created");
 	}
 	
 	public void logExtentReport(String s1) {
@@ -56,4 +56,6 @@ public class ChannelDashboard {
 		waitHelper.waitForElementVisible(chatWithOwnerIcon, 10);
 		chatWithOwnerIcon.click();
 	}
+	
+	
 }
