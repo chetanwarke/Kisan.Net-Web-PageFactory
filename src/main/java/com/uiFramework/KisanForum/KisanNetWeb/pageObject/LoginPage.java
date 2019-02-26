@@ -58,6 +58,9 @@ public class LoginPage {
 	@FindBy(xpath = "//input[@type='submit']")
 	WebElement btnLogin;
 	
+	@FindBy(xpath = "//h4[contains(text(),' UNAUTHORIZED')]")
+	WebElement unauthorizedMessage;
+	
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -122,6 +125,7 @@ public class LoginPage {
 		logExtentReport("entering email id...."+emailId);
 		waitHelper.waitForElementVisible(txtBoxEmail, 10);
 		this.txtBoxEmail.click();
+		this.txtBoxEmail.clear();
 		this.txtBoxEmail.sendKeys(emailId);
 	}
 	
@@ -130,6 +134,7 @@ public class LoginPage {
 		logExtentReport("entering password...."+password);
 		waitHelper.waitForElementVisible(txtBoxPassword, 10);
 		this.txtBoxPassword.click();
+		this.txtBoxPassword.clear();
 		this.txtBoxPassword.sendKeys(password);
 	}
 	
@@ -148,5 +153,21 @@ public class LoginPage {
 		loginPage.enterEmailId(emailId);
 		loginPage.enterPassword(password);
 		loginPage.clickOnLoginButton();
+		if(isUnautorizedAccess()) {
+			driver.navigate().back();
+			loginToApp(emailId, password);
+		}
+	}
+	
+	public boolean isUnautorizedAccess() {
+		log.info("Checking for unautorized access");
+		logExtentReport("Checking for unauthorized access");
+		try {
+			unauthorizedMessage.isDisplayed();
+			return true;
+		}
+		catch(Exception e){
+			return false;
+		}
 	}
 }

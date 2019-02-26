@@ -22,6 +22,9 @@ public class ChannelChatWindow {
 	WaitHelper waitHelper;
 	private final Logger log = LoggerHelper.getLogger(ChannelDashboard.class);
 	
+	@FindBy(xpath = "//div[@class='loadingoverlay']")
+	WebElement loadingOverlay;
+	
 	@FindBy(css = "textarea[placeholder='Type a message']")
 	WebElement sendMessageTextBox;
 	
@@ -38,19 +41,49 @@ public class ChannelChatWindow {
 	WebElement sendTextMessageButton;		
 	
 	@FindAll(@FindBy(css = "button[class='mat-menu-item']"))
-	List<WebElement> attachmentPinOptions;			
+	List<WebElement> attachmentPinOptions;	
+	
+	@FindBy(xpath = "//a[contains(text(),'Camera')]")
+	WebElement cameraOption;
+	
+	@FindBy(xpath = "//a[contains(text(),'Image')]")
+	WebElement imageOption;
+	
+	@FindBy(xpath = "//a[contains(text(),'Video')]")
+	WebElement videoOption;
+	
+	@FindBy(xpath = "//a[contains(text(),'Audio')]")
+	WebElement audioOption;
+	
+	@FindBy(xpath = "//div[contains(text(),'Record a Audio')]")
+	WebElement recordAudioOption;
+	
+	@FindBy(xpath = "//span[contains(text(),'Choose Audio from gallery')]")
+	WebElement chooseAudioOption;
+	
+	@FindBy(xpath = "//a[contains(text(),'Location')]")
+	WebElement locationOption;
+	
+	@FindBy(xpath = "//a[contains(text(),'Document')]")
+	WebElement documentOption;
+	
+	@FindBy(xpath = "//a[contains(text(),'Post')]")
+	WebElement postOption;
 	
 	@FindBy(css = "a[class='borderCircle text-center mat-fab mat-accent']")
-	WebElement sendImageVideoButton;		
+	WebElement sendImageVideoButton;	
+	
+	@FindBy(xpath = "//div[@class='sendBtn']")
+	WebElement sendAudioButton;
+	
+	@FindBy(xpath = "//textarea[@placeholder='Add a Caption']")
+	WebElement addACaption;
 	
 	@FindBy(css = "a[class='text-center mat-fab']")
 	WebElement chatWithAdminButton;
 	
 	@FindBy(css = "i[class='zmdi zmdi-more-vert']")
 	WebElement rightDrawer;
-	
-	@FindBy(css = "div[class='mat-menu-content ng-trigger ng-trigger-fadeInItems']")
-	WebElement rightDrawerOptions;
 	
 	
 	public ChannelChatWindow(WebDriver driver) {
@@ -99,44 +132,96 @@ public class ChannelChatWindow {
 		log.info("Clicking on attachment pin");
 		logExtentReport("Clicking on attachment pin");
 		waitHelper.waitForElementVisible(attachmentPinIcon, ObjectReader.reader.getExplicitWait());
-		attachmentPinIcon.click();
-	}
-	
-	public void clickAttachmentPinOption(String option) throws Exception {
-				
-		 for(WebElement We : attachmentPinOptions){
-			 if(We.getText().equalsIgnoreCase(option)) {
-				 Thread.sleep(1000);
-				 We.click();
-				 break;
-			 }
-		 }
-	}
-	
-	public void selectAttachmentPinOption(String option) throws Exception {
-		switch (option) {
-		case "Camera":
-			clickAttachmentPinOption(option);
-			break;
-			
-		case "Image":
-			clickAttachmentPinOption(option);
-			break;
-			
-		case "Video":
-			clickAttachmentPinOption(option);
-			break;
-			
-		case "Audio":
-			clickAttachmentPinOption(option);
-			break;
-			
-		case "Location":
-			clickAttachmentPinOption(option);
-			break;
-
-		default:
-			break;
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			attachmentPinIcon.click();
 		}
+		else {
+			log.info("Loader is still present");
+		}
+			}
+	
+	public void clickOnCameraOption() {
+		log.info("Clicking on camera option");
+		logExtentReport("Clicking on camera option");
+		waitHelper.waitForElementVisible(cameraOption, ObjectReader.reader.getExplicitWait());
+		cameraOption.click();
+	}	
+	
+	public void clickOnImageOption() {
+		log.info("Clicking on image option");
+		logExtentReport("Clicking on image option");
+		waitHelper.waitForElementVisible(imageOption, ObjectReader.reader.getExplicitWait());
+		imageOption.click();
+	}	
+	
+	public void clickOnVideoOption() {
+		log.info("Clicking on video option");
+		logExtentReport("Clicking on video option");
+		waitHelper.waitForElementVisible(videoOption, ObjectReader.reader.getExplicitWait());
+		videoOption.click();
+	}	
+	
+	public void clickOnAudioOption() {
+		log.info("Clicking on audio option");
+		logExtentReport("Clicking on audio option");
+		waitHelper.waitForElementVisible(audioOption, ObjectReader.reader.getExplicitWait());
+		audioOption.click();
+	}	
+	
+	public void clickOnRecordAudioOption() {
+		log.info("Clicking on record a audio option");
+		logExtentReport("Clicking on record a audio option");
+		waitHelper.waitForElementVisible(recordAudioOption, ObjectReader.reader.getExplicitWait());
+		recordAudioOption.click();
+	}	
+	
+	public void clickOnChooseAudioOption() {
+		log.info("Clicking on choose audio option");
+		logExtentReport("Clicking on choose audio option");
+		waitHelper.waitForElementVisible(chooseAudioOption, ObjectReader.reader.getExplicitWait());
+		chooseAudioOption.click();
+	}	
+	
+	public void clickOnLocationOption() {
+		log.info("Clicking on location option");
+		logExtentReport("Clicking on location option");
+		waitHelper.waitForElementVisible(locationOption, ObjectReader.reader.getExplicitWait());
+		locationOption.click();
+	}	
+	
+	public void clickOnDocumentOption() {
+		log.info("Clicking on document option");
+		logExtentReport("Clicking on document option");
+		waitHelper.waitForElementVisible(documentOption, ObjectReader.reader.getExplicitWait());
+		documentOption.click();
+	}	
+	
+	public void clickOnPostOption() {
+		log.info("Clicking on post option");
+		logExtentReport("Clicking on post option");
+		waitHelper.waitForElementVisible(postOption, ObjectReader.reader.getExplicitWait());
+		postOption.click();
+	}	
+		
+	public void addCaptionForMedia(String message) throws Exception {
+		log.info("Adding caption for file");
+		logExtentReport("Adding caption for file");
+		waitHelper.waitForElementVisible(addACaption, ObjectReader.reader.getExplicitWait());
+		addACaption.sendKeys(message);
+		//Thread.sleep(1000);
 	}
+	
+	public void clickOnSendImageOrVideoButton() {
+		log.info("Clicking on send button");
+		logExtentReport("Clicking on send button");
+		waitHelper.waitForElementVisible(sendImageVideoButton, ObjectReader.reader.getExplicitWait());
+		sendImageVideoButton.click();
+	}	
+	
+	public void clickOnSendAudioButton() {
+		log.info("Clicking on send button");
+		logExtentReport("Clicking on send button");
+		waitHelper.waitForElementVisible(sendAudioButton, ObjectReader.reader.getExplicitWait());
+		sendAudioButton.click();
+	}	
 }
