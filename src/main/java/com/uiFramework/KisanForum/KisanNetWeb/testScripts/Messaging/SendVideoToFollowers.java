@@ -18,8 +18,8 @@ public class SendVideoToFollowers extends TestBase{
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
 	public fileUploadHelper fileUpload = new fileUploadHelper();
 	
-	@Test(dataProvider = "Send image to channel followers")
-	public void sendImageToFollowers(String emailId, String password, String channelName, String message, String runMode) throws Exception {
+	@Test(dataProvider = "Send video to channel followers")
+	public void sendVideoToFollowers(String emailId, String password, String channelName, String message, String runMode) throws Exception {
 		
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
@@ -48,7 +48,7 @@ public class SendVideoToFollowers extends TestBase{
 		Thread.sleep(5000);
 	}
 	
-	@DataProvider(name = "Send image to channel followers")
+	@DataProvider(name = "Send video to channel followers")
 	public Object[][] getImageForFollowers() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessage");
 		return dataSet;

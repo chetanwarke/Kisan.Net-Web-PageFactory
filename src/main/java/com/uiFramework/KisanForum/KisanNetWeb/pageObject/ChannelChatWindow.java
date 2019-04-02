@@ -1,16 +1,20 @@
 package com.uiFramework.KisanForum.KisanNetWeb.pageObject;
 
+import java.awt.Desktop.Action;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
@@ -64,6 +68,22 @@ public class ChannelChatWindow {
 	@FindBy(xpath = "//a[contains(text(),'Location')]")
 	WebElement locationOption;
 	
+	@FindBy(xpath = "//span[contains(text(),' Select a Location')]")
+	WebElement selectLocationHeader;
+	
+	@FindBy(xpath = "//h2[contains(text(),'Around You')]/preceding-sibling::div")
+	WebElement currentLocation;
+	
+	/*@FindBy(xpath = "//span[contains(text(),'Send to')]/following-sibling::a/child::i")
+	WebElement sendLocationButton;*/
+	
+	@FindBy(xpath = "//div[@class='locationPopup locationSmall']/child::mat-dialog-actions[2]/child::div/child::div/child::a/child::i")
+	WebElement sendLocationButton;
+	
+	
+	@FindBy(xpath = "//div[@class='gm-style']/child::iframe")
+	WebElement sendLocationiFrame;
+	
 	@FindBy(xpath = "//a[contains(text(),'Document')]")
 	WebElement documentOption;
 	
@@ -79,6 +99,21 @@ public class ChannelChatWindow {
 	@FindBy(xpath = "//textarea[@placeholder='Add a Caption']")
 	WebElement addACaption;
 	
+	@FindBy(xpath = "//input[@formcontrolname='title']")
+	WebElement titleOfPost;
+	
+	@FindBy(xpath = "//textarea[@formcontrolname='message']")
+	WebElement descriptionOfPost;
+	
+	@FindBy(xpath = "//input[@formcontrolname='mediaFile']")
+	WebElement attachPostMedia;
+	
+	@FindBy(xpath = "//button[contains(text(),'Crop')]")
+	WebElement cropPostImageButton;
+	
+	@FindBy(xpath = "//span[normalize-space(text())='POST']")
+	WebElement sendPostButton;
+	
 	@FindBy(css = "a[class='text-center mat-fab']")
 	WebElement chatWithAdminButton;
 	
@@ -86,10 +121,13 @@ public class ChannelChatWindow {
 	WebElement rightDrawer;
 	
 	
+	
+	
 	public ChannelChatWindow(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
+		//javascriptHelper = new JavaScriptHelper(driver);  // Removing it as it is giving stale element reference
 		new TestBase().getNavigationScreen("ChannelChatWindow",driver);
 		TestBase.logExtentReport("Channel Chat Window Page Object Created");
 	}
@@ -116,7 +154,6 @@ public class ChannelChatWindow {
 		log.info("Entering message in send message box");
 		logExtentReport("Entering message in send message box");
 		waitHelper.waitForElementVisible(sendMessageTextBox, ObjectReader.reader.getExplicitWait());
-		//sendMessageTextBox.click();
 		sendMessageTextBox.sendKeys(message);
 		Thread.sleep(2000);
 	}
@@ -189,6 +226,33 @@ public class ChannelChatWindow {
 		locationOption.click();
 	}	
 	
+	public void clickOnSelectLocationHeader() {
+		log.info("Clicking on select location header");
+		logExtentReport("Clicking on select location header");
+		waitHelper.waitForElementVisible(selectLocationHeader, ObjectReader.reader.getExplicitWait());
+		selectLocationHeader.click();
+	}	
+	
+	public void clickOnCurrentLocation() {
+		log.info("Clicking on current location header");
+		logExtentReport("Clicking on current location header");
+		waitHelper.waitForElementVisible(currentLocation, ObjectReader.reader.getExplicitWait());
+		currentLocation.click();
+	}
+	
+	public void clickOnSendLocationButton() {
+		log.info("Clicking on send location button");
+		logExtentReport("Clicking on send location button");
+		waitHelper.waitForElementVisible(sendLocationButton, ObjectReader.reader.getExplicitWait());
+		sendLocationButton.click();
+	}
+	
+	public void switchToLocationFrame() {
+		log.info("Switching to iframe of location");
+		logExtentReport("Switching to iframe of location");
+		waitHelper.waitForframeToBeAvailableAndSwitchToIt(sendLocationiFrame, ObjectReader.reader.getExplicitWait());
+	}
+	
 	public void clickOnDocumentOption() {
 		log.info("Clicking on document option");
 		logExtentReport("Clicking on document option");
@@ -202,13 +266,52 @@ public class ChannelChatWindow {
 		waitHelper.waitForElementVisible(postOption, ObjectReader.reader.getExplicitWait());
 		postOption.click();
 	}	
-		
+
+	public void enterPostTitle(String message) throws Exception {
+		log.info("Entering title of post");
+		logExtentReport("Entering title of post");
+		waitHelper.waitForElementVisible(titleOfPost, ObjectReader.reader.getExplicitWait());
+		titleOfPost.sendKeys("Title :" + message);
+		Thread.sleep(1000);
+	}
+	
+	public void enterPostDescription(String message) throws Exception {
+		log.info("Entering description of post");
+		logExtentReport("Entering description of post");
+		waitHelper.waitForElementVisible(titleOfPost, ObjectReader.reader.getExplicitWait());
+		descriptionOfPost.sendKeys("Description of post : " + message);
+		Thread.sleep(1000);
+	}
+	
+	public void clickOnAttachPostMediaButton() {
+		log.info("Clicking on attach post media button");
+		logExtentReport("Clicking on attach post media button");
+		//waitHelper.waitForElementVisible(attachPostMedia, ObjectReader.reader.getExplicitWait());
+		attachPostMedia.click();
+	}	
+	
+	public void clickOnCropPostMediaButton() {
+		log.info("Clicking on crop button of post media");
+		logExtentReport("Clicking on crop button of post media");
+		waitHelper.waitForElementVisible(cropPostImageButton, ObjectReader.reader.getExplicitWait());
+		cropPostImageButton.click();
+	}	
+	
+	public void clickOnSendPostButton() throws Exception {
+		log.info("Clicking on send post button");
+		logExtentReport("Clicking on send post button");
+		JavaScriptHelper javascriptHelper = new JavaScriptHelper(driver);
+		//javascriptHelper.scrollDownVertically();
+		//javascriptHelper.scrollIntoView(false);
+		Thread.sleep(1000);
+		sendPostButton.click();
+	}
+	
 	public void addCaptionForMedia(String message) throws Exception {
 		log.info("Adding caption for file");
 		logExtentReport("Adding caption for file");
 		waitHelper.waitForElementVisible(addACaption, ObjectReader.reader.getExplicitWait());
 		addACaption.sendKeys(message);
-		//Thread.sleep(1000);
 	}
 	
 	public void clickOnSendImageOrVideoButton() {

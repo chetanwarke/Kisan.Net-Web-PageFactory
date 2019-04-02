@@ -13,13 +13,13 @@ import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
-public class SendAudioToFollowers extends TestBase{
-
+public class SendDocumentToFollowers extends TestBase{
+	
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
 	public fileUploadHelper fileUpload = new fileUploadHelper();
 	
-	@Test(dataProvider = "Send audio to channel followers")
-	public void sendAudioToFollowers(String emailId, String password, String channelName, String message, String runMode) throws Exception {
+	@Test(dataProvider = "Send document to channel followers")
+	public void sendDocumentToFollowers(String emailId, String password, String channelName, String message, String runMode) throws Exception {
 		
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
@@ -36,21 +36,20 @@ public class SendAudioToFollowers extends TestBase{
 		
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnAudioOption();
-		channelChatWindow.clickOnChooseAudioOption();
+		channelChatWindow.clickOnDocumentOption();
 		
-		fileUpload.CopyFilePath("Audio For Followers.mp3");
+		fileUpload.CopyFilePath("Document For Followers.docx");
 		fileUpload.PasteFilePath();
 		fileUpload.ClickEnter();
 		
-		channelChatWindow.clickOnSendAudioButton();
+		channelChatWindow.clickOnSendImageOrVideoButton();
 		Thread.sleep(5000);
 	}
 	
-	@DataProvider(name = "Send audio to channel followers")
+	@DataProvider(name = "Send document to channel followers")
 	public Object[][] getImageForFollowers() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessage");
 		return dataSet;
 	}
-	
+
 }
