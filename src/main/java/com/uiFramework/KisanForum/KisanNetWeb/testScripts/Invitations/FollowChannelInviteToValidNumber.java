@@ -25,13 +25,19 @@ public class FollowChannelInviteToValidNumber extends TestBase{
 		}
 		
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.loginToApp(emailId, password);
+		loginPage.loginToApp("manisha.kisan17@gmail.com", "manisha123");
+		//loginPage.loginToApp(emailId, password);				adjusted for checking live login
 		
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnRightOptionMenu();
 		homePage.clickOnSearchButton();
-		homePage.enterChannelNameInSearchBox(channelName);
+		homePage.enterChannelNameInSearchBox(channelName);    
 		homePage.clickOnChannelName(channelName);
+		
+		
+		/*homePage.enterChannelNameInSearchBox("VASANT SHEVGA");
+		homePage.clickOnChannelName("VASANT SHEVGA");*/
+		
 		
 		ChannelDashboard channelDashboard = new ChannelDashboard(driver);
 		channelDashboard.clickOnChannelNameInHeader();

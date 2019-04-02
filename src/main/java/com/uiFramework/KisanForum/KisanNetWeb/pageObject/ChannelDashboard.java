@@ -1,5 +1,7 @@
 package com.uiFramework.KisanForum.KisanNetWeb.pageObject;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,7 +34,7 @@ public class ChannelDashboard {
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
 		new TestBase().getNavigationScreen("ChannelDashboard",driver);
-		TestBase.logExtentReport("Channel Chat Window Page Object Created");
+		TestBase.logExtentReport("Channel Dashboard Page Object Created");
 	}
 	
 	public void logExtentReport(String s1) {
@@ -42,6 +44,7 @@ public class ChannelDashboard {
 	public void clickOnChannelNameInHeader() {
 		log.info("Clicking on channel name in header");
 		logExtentReport("Clicking on channel name in header");
+		//waitHelper.setImplicitWait(ObjectReader.reader.getImpliciteWait(), TimeUnit.SECONDS);
 		waitHelper.waitForElementVisible(channelNameInHeader, ObjectReader.reader.getExplicitWait());
 		channelNameInHeader.click();
 	}
@@ -56,4 +59,6 @@ public class ChannelDashboard {
 		waitHelper.waitForElementVisible(chatWithOwnerIcon, 10);
 		chatWithOwnerIcon.click();
 	}
+	
+	
 }

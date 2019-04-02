@@ -20,10 +20,13 @@ public class ChromeBrowser {
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("--test-type");
 		option.addArguments("--disable-popup-blocking");
+		option.addArguments("disable-infobars");
 		//option.addArguments("--disable-notifications");
 		
 		Map<String, Object> prefs=new HashMap<String,Object>();
 		prefs.put("profile.default_content_setting_values.notifications", 1);
+		prefs.put("profile.default_content_setting_values.geolocation", 1);
+
 		//1-Allow, 2-Block, 0-default
 		option.setExperimentalOption("prefs",prefs);
 		

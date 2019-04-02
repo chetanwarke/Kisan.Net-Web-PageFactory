@@ -100,6 +100,7 @@ public class ChannelProfile {
 		else {
 			log.info("Channle profile is still loading");
 		}
+		//waitHelper.setImplicitWait(20, TimeUnit.SECONDS);
 	}
 
 	public void clickOnCloseButton() {
