@@ -29,6 +29,9 @@ public class ChannelDashboard {
 	@FindBy(xpath = "//a[@mattooltip='Chat with channel Owner!']")
 	WebElement chatWithOwnerIcon;
 	
+	@FindBy(xpath = "//div[@class='loadingoverlay']")
+	WebElement loadingOverlay;
+	
 	public ChannelDashboard(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -44,7 +47,6 @@ public class ChannelDashboard {
 	public void clickOnChannelNameInHeader() {
 		log.info("Clicking on channel name in header");
 		logExtentReport("Clicking on channel name in header");
-		//waitHelper.setImplicitWait(ObjectReader.reader.getImpliciteWait(), TimeUnit.SECONDS);
 		waitHelper.waitForElementVisible(channelNameInHeader, ObjectReader.reader.getExplicitWait());
 		channelNameInHeader.click();
 	}
@@ -57,7 +59,13 @@ public class ChannelDashboard {
 		log.info("Clicking on chat with owner icon");
 		logExtentReport("Clicking on chat with owner icon");
 		waitHelper.waitForElementVisible(chatWithOwnerIcon, 10);
-		chatWithOwnerIcon.click();
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			chatWithOwnerIcon.click();
+		}
+		else {
+			log.info("Left drawer is still loading");
+		}
+		
 	}
 	
 	

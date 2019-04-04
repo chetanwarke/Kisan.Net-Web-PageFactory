@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.fileUploadHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.InvitePage;
@@ -18,7 +18,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class AppDownloadInviteUsingCSV extends TestBase{
 
 private final Logger log = LoggerHelper.getLogger(AppDownloadInviteUsingCSV.class);
-public fileUploadHelper fileUpload = new fileUploadHelper();
+public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "getInviteList",description = "Invite to download app with CSV")
 	public void inviteByCSVToValidNumber(String emailId, String password, String mobileNumber, String runMode) throws Exception {
