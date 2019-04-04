@@ -5,7 +5,7 @@ import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.fileUploadHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
@@ -16,7 +16,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendAudioToFollowers extends TestBase{
 
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
-	public fileUploadHelper fileUpload = new fileUploadHelper();
+	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Send audio to channel followers")
 	public void sendAudioToFollowers(String emailId, String password, String channelName, String message, String runMode) throws Exception {

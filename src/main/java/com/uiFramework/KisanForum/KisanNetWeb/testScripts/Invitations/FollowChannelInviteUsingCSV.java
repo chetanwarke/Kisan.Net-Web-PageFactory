@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.fileUploadHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelDashboard;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile;
@@ -18,7 +18,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class FollowChannelInviteUsingCSV extends TestBase{
 	
 	private final Logger log = LoggerHelper.getLogger(FollowChannelInviteUsingCSV.class);
-	public fileUploadHelper fileUpload = new fileUploadHelper();
+	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Get Channel Name", description = "Invite to follow channel using csv")
 	public void inviteToFollowChannelByCSV(String emailId, String password, String channelName, String mobileNumber, String runMode) throws Exception {

@@ -12,7 +12,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.helper.excel.ExcelHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.resource.ResourceHelper;
 
-public class fileUploadHelper {
+public class FileUploadHelper {
 
 	private static Logger log = LoggerHelper.getLogger(AssertionHelper.class);
 	static Robot robot;
@@ -29,7 +29,7 @@ public class fileUploadHelper {
 			robot = new Robot();
 
 			robot.setAutoDelay(2000);
-			/*fileUploadHelper getFilePath = new fileUploadHelper();
+			/*FileUploadHelper getFilePath = new FileUploadHelper();
 			String path = getFilePath.getFilePath(fileName);*/
 			
 			String path = ResourceHelper.getResourcePath("src\\main\\resources\\configfile\\")+fileName;

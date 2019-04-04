@@ -111,7 +111,6 @@ public class HomePage {
 	public void clickOnChannelName(String channelName) throws Exception {
 		List<WebElement> channelList = getChannelList();
 		for(int i=0; i<channelList.size(); i++) {
-			//if(channelList.get(i).getText().equals(channelName)) {
 				if(verificationHelper.readValueFromElement(channelList.get(i)).equals(channelName)) {	
 				Thread.sleep(2000);
 				channelList.get(i).click();

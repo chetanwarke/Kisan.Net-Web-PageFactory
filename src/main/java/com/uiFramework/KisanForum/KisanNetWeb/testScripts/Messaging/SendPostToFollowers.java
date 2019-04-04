@@ -5,7 +5,7 @@ import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.fileUploadHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow;
@@ -17,7 +17,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendPostToFollowers extends TestBase{
 	
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
-	public fileUploadHelper fileUpload = new fileUploadHelper();
+	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	
 	@Test(dataProvider = "Send post to channel followers")
@@ -89,7 +89,7 @@ public class SendPostToFollowers extends TestBase{
 	}
 	
 	@DataProvider(name = "Send post to channel followers")
-	public Object[][] getImageForFollowers() throws Exception{
+	public Object[][] getPostDetailsForFollowers() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessage");
 		return dataSet;
 	}
