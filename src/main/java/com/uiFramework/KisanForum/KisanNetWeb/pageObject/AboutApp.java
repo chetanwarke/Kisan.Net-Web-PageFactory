@@ -23,7 +23,7 @@ public class AboutApp {
 	@FindBy(xpath = "//h3[contains(text(),'Namaskar!')]")
 	WebElement namaskarText;
 	
-	@FindBy(xpath = "//p[contains(text(),'App Version 6.0')]")
+	@FindBy(xpath = "//p[contains(text(),'Web App Version 6.7')]")
 	WebElement appVersion;
 	
 	public AboutApp(WebDriver driver) {

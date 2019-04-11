@@ -35,7 +35,7 @@ private Logger log = LoggerHelper.getLogger(VerifyAboutAppPage.class);
 		SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertTrue(aboutApp.verifyNamaskarText(namaskar), "Namaskar text displayed");
 		softAssertion.assertTrue(aboutApp.verifyAppVersion(version), "App version is correct");
-		softAssertion.assertTrue(aboutApp.verifyInfoMessage(message), "Page information is correct");
+		//softAssertion.assertTrue(aboutApp.verifyInfoMessage(message), "Page information is correct");
 		
 		softAssertion.assertAll();
 		

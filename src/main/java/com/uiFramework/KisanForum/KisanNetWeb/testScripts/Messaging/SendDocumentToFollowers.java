@@ -47,7 +47,7 @@ public class SendDocumentToFollowers extends TestBase{
 	}
 	
 	@DataProvider(name = "Send document to channel followers")
-	public Object[][] getImageForFollowers() throws Exception{
+	public Object[][] getDocForFollowers() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessage");
 		return dataSet;
 	}

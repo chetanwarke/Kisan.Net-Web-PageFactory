@@ -1,15 +1,13 @@
 package com.uiFramework.KisanForum.KisanNetWeb.pageObject;
 
-import java.awt.Desktop.Action;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
@@ -77,9 +75,11 @@ public class ChannelChatWindow {
 	/*@FindBy(xpath = "//span[contains(text(),'Send to')]/following-sibling::a/child::i")
 	WebElement sendLocationButton;*/
 	
+	@FindBy(xpath = "//a/child::i[@class='zmdi zmdi-mail-send']")
+	WebElement sendLocationButton1;
+	
 	@FindBy(xpath = "//div[@class='locationPopup locationSmall']/child::mat-dialog-actions[2]/child::div/child::div/child::a/child::i")
 	WebElement sendLocationButton;
-	
 	
 	@FindBy(xpath = "//div[@class='gm-style']/child::iframe")
 	WebElement sendLocationiFrame;
@@ -120,7 +120,10 @@ public class ChannelChatWindow {
 	@FindBy(css = "i[class='zmdi zmdi-more-vert']")
 	WebElement rightDrawer;
 	
+	@FindAll(@FindBy(xpath = "//h3"))
+	List<WebElement> oneToOneChatList;
 	
+	public static By allOneToOneChats = By.xpath("//h3");
 	
 	
 	public ChannelChatWindow(WebDriver driver) {
@@ -327,4 +330,18 @@ public class ChannelChatWindow {
 		waitHelper.waitForElementVisible(sendAudioButton, ObjectReader.reader.getExplicitWait());
 		sendAudioButton.click();
 	}	
+	
+	public List<WebElement> getOneToOneChatList(){
+		log.info("Waiting for one to one chats to appear");
+		logExtentReport("Waiting for one to one chats to appear");
+		waitHelper.waitForAllElement(allOneToOneChats, 15);
+		return oneToOneChatList;
+	}
+	
+	public void clickOnFirstFollowerFromOneToOneChatList() {
+		log.info("Clicking on first follower from one to one chat list");
+		logExtentReport("Clicking on first follower from one to one chat list");
+		List<WebElement> oneToOneChatList = getOneToOneChatList();
+		oneToOneChatList.get(0).click();
+	}
 }

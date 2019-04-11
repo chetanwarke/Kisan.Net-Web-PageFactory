@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [AllTests]]">
+  <test name="AppDownloadValidInvite(failed)(failed)">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber">
+        <methods>
+          <include name="inviteToFollowChannelWithBlankNumber"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV">
+        <methods>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber">
+        <methods>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber -->
+    </classes>
+  </test> <!-- AppDownloadValidInvite(failed)(failed) -->
+  <test name="AppDownloadInviteUsingCSV(failed)(failed)">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber">
+        <methods>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV">
+        <methods>
+          <include name="inviteByCSVToValidNumber"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber">
+        <methods>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber -->
+    </classes>
+  </test> <!-- AppDownloadInviteUsingCSV(failed)(failed) -->
+  <test name="FollowChannelInviteToValidNumber(failed)(failed)">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber">
+        <methods>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber">
+        <methods>
+          <include name="inviteToFollowChannelWithValidNumber"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV">
+        <methods>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV -->
+    </classes>
+  </test> <!-- FollowChannelInviteToValidNumber(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [AllTests]] -->

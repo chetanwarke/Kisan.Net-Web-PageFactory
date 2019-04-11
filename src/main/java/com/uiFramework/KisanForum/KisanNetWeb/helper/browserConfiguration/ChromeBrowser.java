@@ -21,6 +21,7 @@ public class ChromeBrowser {
 		option.addArguments("--test-type");
 		option.addArguments("--disable-popup-blocking");
 		option.addArguments("disable-infobars");
+		//option.addArguments("incognito");
 		//option.addArguments("--disable-notifications");
 		
 		Map<String, Object> prefs=new HashMap<String,Object>();
