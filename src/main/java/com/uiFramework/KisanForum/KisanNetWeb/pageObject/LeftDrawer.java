@@ -42,7 +42,7 @@ public class LeftDrawer {
 	@FindBy(xpath = "//a[contains(text(),'Channel Profile')]")
 	WebElement btnChannelProfile;
 	
-	@FindBy(xpath = "//span[contains(text(),'ABOUT APP')]")
+	@FindBy(xpath = "//span[contains(text(),'About App')]")
 	WebElement optionAboutApp;
 	
 	@FindBy(xpath = "//span[contains(text(),'Support')]")
@@ -138,7 +138,12 @@ public class LeftDrawer {
 		log.info("Clicking on about app option");
 		logExtentReport("Clicking on about app option");
 		waitHelper.WaitForElementClickable(optionAboutApp, ObjectReader.reader.getExplicitWait());
-		optionAboutApp.click();
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			optionAboutApp.click();
+		}
+		else {
+			log.info("Left drawer is still loading");
+		}
 	}
 	
 	public void clickOnSupportOption() {
@@ -156,8 +161,9 @@ public class LeftDrawer {
 	public void clickOnLogoutOption() {
 		log.info("Clicking on logout option");
 		logExtentReport("Clicking on logout option");
-		waitHelper.WaitForElementClickable(optionLogout, ObjectReader.reader.getExplicitWait());
 		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			javaScriptHelper.scrollIntoView(optionLogout);
+			waitHelper.WaitForElementClickable(optionLogout, ObjectReader.reader.getExplicitWait());
 			optionLogout.click();
 		}
 		else {

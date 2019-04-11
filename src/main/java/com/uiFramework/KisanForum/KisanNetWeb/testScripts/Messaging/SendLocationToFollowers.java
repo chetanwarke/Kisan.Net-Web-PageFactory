@@ -37,14 +37,9 @@ public class SendLocationToFollowers extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnLocationOption();
-		
-		/*fileUpload.CopyFilePath("Document For Followers.docx");
-		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();*/
-		
 		channelChatWindow.clickOnSelectLocationHeader();
 		channelChatWindow.clickOnCurrentLocation();
-		channelChatWindow.switchToLocationFrame();
+		//channelChatWindow.switchToLocationFrame();
 		channelChatWindow.clickOnSendLocationButton();
 		
 		Thread.sleep(5000);

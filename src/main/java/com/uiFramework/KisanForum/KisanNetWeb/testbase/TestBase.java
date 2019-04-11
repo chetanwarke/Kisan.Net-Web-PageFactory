@@ -53,7 +53,7 @@ public class TestBase {
 		extent = ExtentManager.getInstance();
 	}
 	
-	@BeforeTest
+	/*@BeforeTest
 	public void beforeTest() throws Exception{
 		ObjectReader.reader = new PropertyReader();
 		reportDirectery = new File(ResourceHelper.getResourcePath("src/main/resources/screenShots"));
@@ -71,9 +71,60 @@ public class TestBase {
 	public void beforeMethod(Method method){
 		test.log(Status.INFO, method.getName()+"**************test started***************");
 		log.info("**************"+method.getName()+" Started***************");
+	}*/
+	
+	
+	
+	
+	
+	@BeforeMethod
+	public void beforeMethod(Method method) throws Exception{
+		ObjectReader.reader = new PropertyReader();
+		reportDirectery = new File(ResourceHelper.getResourcePath("src/main/resources/screenShots"));
+		setUpDriver(ObjectReader.reader.getBrowserType());
+		test = extent.createTest(getClass().getSimpleName());
+		driver.manage().deleteAllCookies();
+		getApplicationUrl(ObjectReader.reader.getExhibitorLoginUrl());
+		test.log(Status.INFO, method.getName()+"**************test started***************");
+		log.info("**************"+method.getName()+" Started***************");
 	}
 	
 	@AfterMethod
+	public void afterMethod(ITestResult result) throws IOException, Exception{
+		Thread.sleep(4000);
+		if(result.getStatus() == ITestResult.FAILURE){
+			test.log(Status.FAIL, result.getThrowable());
+			String imagePath = captureScreen(result.getName(),driver);
+			test.addScreenCaptureFromPath(imagePath);
+		}
+		else if(result.getStatus() == ITestResult.SUCCESS){
+			test.log(Status.PASS, result.getName()+" is pass");
+			//String imagePath = captureScreen(result.getName(),driver);
+			//test.addScreenCaptureFromPath(imagePath);
+		}
+		else if(result.getStatus() == ITestResult.SKIP){
+			test.log(Status.SKIP, result.getThrowable());
+		}
+		log.info("**************"+result.getName()+"Finished***************");
+		extent.flush();
+		if(driver!=null){
+			driver.manage().deleteAllCookies();
+			driver.close();
+		}
+	}
+	
+	@AfterTest
+	public void afterTest() throws Exception{
+		if(driver!=null){
+			//driver.manage().deleteAllCookies();
+			//driver.quit();
+		}
+	}
+	
+	
+	
+	
+	/*@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException, Exception{
 		Thread.sleep(4000);
 		if(result.getStatus() == ITestResult.FAILURE){
@@ -100,7 +151,7 @@ public class TestBase {
 			driver.quit();
 		}
 	}
-	
+	*/
 	public WebDriver getBrowserObject(BrowserType btype) throws Exception{
 		
 		try{

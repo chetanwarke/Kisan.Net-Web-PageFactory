@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout">
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneTextMessageToFollower">
         <methods>
-          <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="logoutFromApp" invocation-numbers="0"/>
-          <include name="afterTest"/>
+          <include name="sendTextMessageToAdmin" invocation-numbers="0"/>
           <include name="beforeSuite"/>
-          <include name="beforeClass"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout -->
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneTextMessageToFollower -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

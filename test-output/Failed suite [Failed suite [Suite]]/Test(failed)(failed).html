@@ -1,0 +1,1279 @@
+<html>
+<head>
+<title>TestNG:  Test(failed)(failed)</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test(failed)(failed)</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/11/2</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 09 18:14:10 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>1139 seconds (1139442 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromDiscoverPage.followChannelFromDiscoverPage1()'><b>followChannelFromDiscoverPage1</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromDiscoverPage<br>Test method: Follow channel from discover page<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0009, Y<br/>
+<a href="#Output-1592919391" onClick='toggleBox("Output-1592919391", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1592919391" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1592919391">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_26_01.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_26_01.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_26_03.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_26_03.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_26_14.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_26_14.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_27_04.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_27_04.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Channel followed successfully. expected [true] but found [false]
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromDiscoverPage.followChannelFromDiscoverPage1(FollowChannelFromDiscoverPage.java:64)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1592919391", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1592919391'><pre>java.lang.AssertionError: Channel followed successfully. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromDiscoverPage.followChannelFromDiscoverPage1(FollowChannelFromDiscoverPage.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>87</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromDiscoverPage@7791a895</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber.inviteToFollowChannelWithBlankNumber()'><b>inviteToFollowChannelWithBlankNumber</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber<br>Test method: Invite to follow channel with valid number<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 1003, 9021633629, Y<br/>
+<a href="#Output-1776971477" onClick='toggleBox("Output-1776971477", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1776971477" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1776971477">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_29_23.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_29_23.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_29_25.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_29_25.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_29_47.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_29_47.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_29_56.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_29_56.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_29_57.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_29_57.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\InvitePage_09_04_2019_06_30_10.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\InvitePage_09_04_2019_06_30_10.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper.fail(AssertionHelper.java:56)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper.updateTestStatus(AssertionHelper.java:68)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber.inviteToFollowChannelWithBlankNumber(FollowChannelInviteToBlankNumber.java:48)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1776971477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1776971477'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper.fail(AssertionHelper.java:56)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper.updateTestStatus(AssertionHelper.java:68)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber.inviteToFollowChannelWithBlankNumber(FollowChannelInviteToBlankNumber.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>58</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber@2b9627bc</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber.inviteToFollowChannelWithValidNumber()'><b>inviteToFollowChannelWithValidNumber</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber<br>Test method: Invite to follow channel with valid number<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 1003, 9021633629, Y<br/>
+<a href="#Output-91220956" onClick='toggleBox("Output-91220956", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-91220956" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-91220956">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_14_27.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_14_27.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_14_28.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_14_28.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_14_29.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_14_29.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_14_41.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_14_41.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;limitChannelName ng-star-inserted&apos;]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: e81c068be965d2ae39051e8e08bd4d42
+*** Element info: {Using=xpath, value=//span[@class=&apos;limitChannelName ng-star-inserted&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper.waitForAllElement(WaitHelper.java:192)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage.clickOnRightOptionMenu(HomePage.java:91)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber.inviteToFollowChannelWithValidNumber(FollowChannelInviteToValidNumber.java:32)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace91220956", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace91220956'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;limitChannelName ng-star-inserted&apos;]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: e81c068be965d2ae39051e8e08bd4d42
+*** Element info: {Using=xpath, value=//span[@class=&apos;limitChannelName ng-star-inserted&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper.waitForAllElement(WaitHelper.java:192)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage.clickOnRightOptionMenu(HomePage.java:91)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber.inviteToFollowChannelWithValidNumber(FollowChannelInviteToValidNumber.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>24</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber@3b0143d3</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin.sendAudioToAdmin()'><b>sendAudioToAdmin</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 1010, Hey, This is automated message., Y<br/>
+<a href="#Output-656028320" onClick='toggleBox("Output-656028320", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-656028320" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-656028320">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_27_38.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_27_38.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_27_40.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_27_40.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_27_52.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_27_52.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_28_07.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_28_07.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_28_18.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_28_18.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;sendBtn&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper.waitForElementVisible(WaitHelper.java:167)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.clickOnSendAudioButton(ChannelChatWindow.java:326)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin.sendAudioToAdmin(SendAudioToAdmin.java:49)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;sendBtn&apos;]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 280373732c2895bce57e08cb2babb948
+*** Element info: {Using=xpath, value=//div[@class=&apos;sendBtn&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	... 27 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace656028320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace656028320'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;sendBtn&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper.waitForElementVisible(WaitHelper.java:167)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.clickOnSendAudioButton(ChannelChatWindow.java:326)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin.sendAudioToAdmin(SendAudioToAdmin.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;sendBtn&apos;]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 280373732c2895bce57e08cb2babb948
+*** Element info: {Using=xpath, value=//div[@class=&apos;sendBtn&apos;]}
+	at sun.reflect.GeneratedConstructorAccessor39.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	... 27 more
+</pre></div></td>
+<td>95</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin@4f970963</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToAdmin.sendImageToAdmin()'><b>sendImageToAdmin</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToAdmin<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 1010, Hey, This is automated message., Y<br/>
+<a href="#Output-320064009" onClick='toggleBox("Output-320064009", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-320064009" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-320064009">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_31_54.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_31_54.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_31_55.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_31_55.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_31_57.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_31_57.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_32_20.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_32_20.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_32_28.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_32_28.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_32_39.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_32_39.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot focus element
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 32510a2debc7ec84a26139f06433e4f4
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.addCaptionForMedia(ChannelChatWindow.java:313)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToAdmin.sendImageToAdmin(SendImageToAdmin.java:49)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace320064009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace320064009'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot focus element
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 32510a2debc7ec84a26139f06433e4f4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.addCaptionForMedia(ChannelChatWindow.java:313)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToAdmin.sendImageToAdmin(SendImageToAdmin.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>70</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToAdmin@1d16f93d</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin.sendTextMessageToAdmin()'><b>sendTextMessageToAdmin</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 1010, Hey, This is automated message., Y<br/>
+<a href="#Output-57404623" onClick='toggleBox("Output-57404623", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-57404623" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-57404623">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_23_40.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_23_40.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_23_41.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_23_41.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_23_42.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_23_42.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_25_29.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_25_29.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_25_37.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_25_37.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_25_48.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_25_48.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot focus element
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 4bfef6bb8c53cfd3a7d50b50cf1d9372
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.enterMessageInSendbox(ChannelChatWindow.java:156)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin.sendTextMessageToAdmin(SendTextMessageToAdmin.java:38)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace57404623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace57404623'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot focus element
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 4bfef6bb8c53cfd3a7d50b50cf1d9372
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.enterMessageInSendbox(ChannelChatWindow.java:156)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin.sendTextMessageToAdmin(SendTextMessageToAdmin.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>128</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin@731a74c</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin.sendVideoToAdmin()'><b>sendVideoToAdmin</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 1010, Hey, This is automated message., Y<br/>
+<a href="#Output-1769233662" onClick='toggleBox("Output-1769233662", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1769233662" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1769233662">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_22_08.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_22_08.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_22_09.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_22_09.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_22_10.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_22_10.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_22_32.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_22_32.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_22_40.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_22_40.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_22_51.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelChatWindow_09_04_2019_06_22_51.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot focus element
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: d6861f87a02c31b72ea9b15e3a061221
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.addCaptionForMedia(ChannelChatWindow.java:313)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin.sendVideoToAdmin(SendVideoToAdmin.java:48)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1769233662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1769233662'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot focus element
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: d6861f87a02c31b72ea9b15e3a061221
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelChatWindow.addCaptionForMedia(ChannelChatWindow.java:313)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin.sendVideoToAdmin(SendVideoToAdmin.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>68</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin@65e2dbf3</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromDiscoverPage.unfollowChannelFromDiscoverPage()'><b>unfollowChannelFromDiscoverPage</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromDiscoverPage<br>Test method: Search existing channel on discover page<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0009, Y<br/>
+<a href="#Output-194298413" onClick='toggleBox("Output-194298413", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-194298413" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-194298413">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_54.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_54.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_55.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_55.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_57.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_57.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_18_19.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_18_19.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_18_19.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_18_19.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_18_33.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_18_33.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;rightsideIconDropdown&apos;]/child::button&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: c9cbd5d998c85350215fac2838afc8de
+*** Element info: {Using=xpath, value=//div[@class=&apos;rightsideIconDropdown&apos;]/child::button}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.click(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile.clickOnRightOptionMenu(ChannelProfile.java:90)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromDiscoverPage.unfollowChannelFromDiscoverPage(UnfollowChannelFromDiscoverPage.java:40)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace194298413", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace194298413'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;rightsideIconDropdown&apos;]/child::button&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: c9cbd5d998c85350215fac2838afc8de
+*** Element info: {Using=xpath, value=//div[@class=&apos;rightsideIconDropdown&apos;]/child::button}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.click(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile.clickOnRightOptionMenu(ChannelProfile.java:90)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromDiscoverPage.unfollowChannelFromDiscoverPage(UnfollowChannelFromDiscoverPage.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>61</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromDiscoverPage@1f28c152</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromHomePage.unfollowChannelFromHomePage()'><b>unfollowChannelFromHomePage</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromHomePage<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0009, Y<br/>
+<a href="#Output-1573805059" onClick='toggleBox("Output-1573805059", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1573805059" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1573805059">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_16_06.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_16_06.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_16_08.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_16_08.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_16_32.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_16_32.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_16_40.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelDashboard_09_04_2019_06_16_40.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_16_40.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_16_40.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;rightsideIconDropdown&apos;]/child::button&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 6712b1fc33877b229d189d1adcf529cb
+*** Element info: {Using=xpath, value=//div[@class=&apos;rightsideIconDropdown&apos;]/child::button}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.click(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile.clickOnRightOptionMenu(ChannelProfile.java:90)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromHomePage.unfollowChannelFromHomePage(UnfollowChannelFromHomePage.java:38)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1573805059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1573805059'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;rightsideIconDropdown&apos;]/child::button&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 6712b1fc33877b229d189d1adcf529cb
+*** Element info: {Using=xpath, value=//div[@class=&apos;rightsideIconDropdown&apos;]/child::button}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.click(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile.clickOnRightOptionMenu(ChannelProfile.java:90)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromHomePage.unfollowChannelFromHomePage(UnfollowChannelFromHomePage.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>57</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromHomePage@67b92f0a</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile.unfollowChannelFromUserProfile()'><b>unfollowChannelFromUserProfile</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0009, Y<br/>
+<a href="#Output-1378872294" onClick='toggleBox("Output-1378872294", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1378872294" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1378872294">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_30_30.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_30_30.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_30_31.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_30_31.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_30_33.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_30_33.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_30_44.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_30_44.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;mat-list-item aria-haspopup=&quot;true&quot; class=&quot;pad-tb-sm mat-list-item mat-list-item-avatar mat-list-item-with-avatar&quot; ng-reflect-menu=&quot;[object Object]&quot;&gt;...&lt;/mat-list-item&gt; is not clickable at point (674, 241). Other element would receive the click: &lt;div id=&quot;cdk-overlay-1&quot; class=&quot;cdk-overlay-pane&quot; style=&quot;pointer-events: auto; position: static;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: b414aff85ab9e76831bea9e28290a2a3
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper.scrollIntoViewAndClick(JavaScriptHelper.java:76)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer.clickOnChannelName(LeftDrawer.java:123)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile.unfollowChannelFromUserProfile(UnfollowChannelFromUserProfile.java:36)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1378872294", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1378872294'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;mat-list-item aria-haspopup=&quot;true&quot; class=&quot;pad-tb-sm mat-list-item mat-list-item-avatar mat-list-item-with-avatar&quot; ng-reflect-menu=&quot;[object Object]&quot;&gt;...&lt;/mat-list-item&gt; is not clickable at point (674, 241). Other element would receive the click: &lt;div id=&quot;cdk-overlay-1&quot; class=&quot;cdk-overlay-pane&quot; style=&quot;pointer-events: auto; position: static;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: b414aff85ab9e76831bea9e28290a2a3
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper.scrollIntoViewAndClick(JavaScriptHelper.java:76)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer.clickOnChannelName(LeftDrawer.java:123)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile.unfollowChannelFromUserProfile(UnfollowChannelFromUserProfile.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>73</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile@3a5ed7a6</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifyAboutAppPage.verifyAboutPage()'><b>verifyAboutPage</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifyAboutAppPage<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Namaskar!, Web App Version 6.7, We would be happy to help you., Y<br/>
+<a href="#Output-1290974330" onClick='toggleBox("Output-1290974330", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1290974330" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1290974330">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_19_09.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_19_09.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_19_11.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_19_11.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_20_02.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_20_02.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\About App_09_04_2019_06_20_45.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\About App_09_04_2019_06_20_45.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos;Web App Version 6.7&apos;)]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 356b1362c4ec9dd730fa36349aa8e3d4
+*** Element info: {Using=xpath, value=//p[contains(text(),&apos;Web App Version 6.7&apos;)]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.getText(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.AboutApp.verifyAppVersion(AboutApp.java:61)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifyAboutAppPage.verifyAboutPage(VerifyAboutAppPage.java:37)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1290974330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1290974330'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos;Web App Version 6.7&apos;)]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;KISANABHI-PC&apos;, ip: &apos;192.168.0.121&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\KISANA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 356b1362c4ec9dd730fa36349aa8e3d4
+*** Element info: {Using=xpath, value=//p[contains(text(),&apos;Web App Version 6.7&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.getText(Unknown Source)
+	at com.uiFramework.KisanForum.KisanNetWeb.pageObject.AboutApp.verifyAppVersion(AboutApp.java:61)
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifyAboutAppPage.verifyAboutPage(VerifyAboutAppPage.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>106</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifyAboutAppPage@5a8e6209</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromProfile.followChannelFromProfile()'><b>followChannelFromProfile</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromProfile<br>Test method: Follow channel from channel profile<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0009, Y<br/>
+<a href="#Output-1898500295" onClick='toggleBox("Output-1898500295", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1898500295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1898500295">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_21_14.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_21_14.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_21_16.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_21_16.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_21_27.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_21_27.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_21_28.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_21_28.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_21_43.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\ChannelProfile_09_04_2019_06_21_43.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromProfile@7d907bac</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage.searchExistingChannelOnDiscoverPage()'><b>searchExistingChannelOnDiscoverPage</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage<br>Test method: Search existing channel on discover page<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0008, Y, Y<br/>
+<a href="#Output-160549854" onClick='toggleBox("Output-160549854", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-160549854" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-160549854">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_15_02.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_15_02.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_15_03.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_15_03.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_15_05.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_15_05.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_15_40.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_15_40.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_15_41.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\DiscoverPage_09_04_2019_06_15_41.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage@7b49cea0</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage.searchExistingChannelOnHomePage()'><b>searchExistingChannelOnHomePage</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage<br>Test method: Search existing channel on home page<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0008, Y, Y<br/>
+<a href="#Output-1914683944" onClick='toggleBox("Output-1914683944", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1914683944" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1914683944">
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_13.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_13.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_14.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_14.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_15.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\LoginPage_09_04_2019_06_17_15.png'height='100' width='100'/></a><br/>
+captureScreen method called<br/>
+<a href='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_17_41.png'><img src='G:\Automation Projects\Kisan.NetWeb\src\main\resources\screenShots\Homepage_09_04_2019_06_17_41.png'height='100' width='100'/></a><br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage@369f73a2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage.searchNonExistingChannelOnDiscoverPage()'><b>searchNonExistingChannelOnDiscoverPage</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage<br>Test method: Search non existing channel on discover page<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0008, Y, Y</td>
+<td><div><pre>org.testng.SkipException: Run mode for this data is marked N
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage.searchNonExistingChannelOnDiscoverPage(SearchNonExistingChannelOnDiscoverPage.java:26)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1624949878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1624949878'><pre>org.testng.SkipException: Run mode for this data is marked N
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage.searchNonExistingChannelOnDiscoverPage(SearchNonExistingChannelOnDiscoverPage.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage@6b09bb57</td></tr>
+<tr>
+<td title='com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage.searchNonExistingChannelOnHomePage()'><b>searchNonExistingChannelOnHomePage</b><br>Test class: com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage<br>Test method: Search non-existing channel on home page<br>Parameters: exh_1003@mailinator.com, chan@kisan18, Channel 0008, Y, Y</td>
+<td><div><pre>org.testng.SkipException: This channel is already existing
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage.searchNonExistingChannelOnHomePage(SearchNonExistingChannelOnHomePage.java:25)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace428996455", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace428996455'><pre>org.testng.SkipException: This channel is already existing
+	at com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage.searchNonExistingChannelOnHomePage(SearchNonExistingChannelOnHomePage.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage@61f8bee4</td></tr>
+</table><p>
+</body>
+</html>

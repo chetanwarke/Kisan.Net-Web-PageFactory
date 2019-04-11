@@ -3,6 +3,7 @@ package com.uiFramework.KisanForum.KisanNetWeb.pageObject;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -131,9 +132,8 @@ public class DiscoverPage {
 		log.info("Entering channel name in search box");
 		logExtentReport("Entering channel name in search box");
 		waitHelper.waitForElementVisible(txtBoxSearch, ObjectReader.reader.getExplicitWait());
-		txtBoxSearch.click();
 		txtBoxSearch.sendKeys(channelName);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	}
 	
 	public boolean isChannelExists(String channelName) throws Exception {
@@ -197,4 +197,5 @@ public class DiscoverPage {
 	public boolean verifyChannelFollowedToast() {
 		return new VerificationHelper(driver).isDisplayed(channelFollowedToast);
 	}
+	
 }
