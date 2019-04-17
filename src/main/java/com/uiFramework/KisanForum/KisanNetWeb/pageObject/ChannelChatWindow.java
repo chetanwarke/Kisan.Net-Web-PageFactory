@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
@@ -22,6 +23,7 @@ public class ChannelChatWindow {
 
 	WebDriver driver;
 	WaitHelper waitHelper;
+	VerificationHelper verificationHelper;
 	private final Logger log = LoggerHelper.getLogger(ChannelDashboard.class);
 	
 	@FindBy(xpath = "//div[@class='loadingoverlay']")
@@ -123,6 +125,9 @@ public class ChannelChatWindow {
 	@FindAll(@FindBy(xpath = "//h3"))
 	List<WebElement> oneToOneChatList;
 	
+	@FindBy(xpath = "//div[contains(text(),' You can not send and receive messages to this user')]")
+	WebElement blockedFollowerText;
+	
 	public static By allOneToOneChats = By.xpath("//h3");
 	
 	
@@ -130,6 +135,7 @@ public class ChannelChatWindow {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
+		verificationHelper = new VerificationHelper(driver);
 		//javascriptHelper = new JavaScriptHelper(driver);  // Removing it as it is giving stale element reference
 		new TestBase().getNavigationScreen("ChannelChatWindow",driver);
 		TestBase.logExtentReport("Channel Chat Window Page Object Created");
@@ -341,7 +347,21 @@ public class ChannelChatWindow {
 	public void clickOnFirstFollowerFromOneToOneChatList() {
 		log.info("Clicking on first follower from one to one chat list");
 		logExtentReport("Clicking on first follower from one to one chat list");
-		List<WebElement> oneToOneChatList = getOneToOneChatList();
-		oneToOneChatList.get(0).click();
+		List<WebElement> oneToOneChatList = getOneToOneChatList();		
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			oneToOneChatList.get(0).click();
+		}
+		else {
+			log.info("Follower list is still loading");
+		}
+		
+		/*This code will check if first follower in one to one chat is blocked or removed*/
+		
+		int i = 1;
+		while(verificationHelper.isDisplayed(blockedFollowerText)) {
+			oneToOneChatList.get(i).click();
+			i = i + 1;
+		}
+		
 	}
 }
