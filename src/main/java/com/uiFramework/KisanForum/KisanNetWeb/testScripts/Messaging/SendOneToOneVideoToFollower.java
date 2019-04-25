@@ -15,12 +15,12 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class SendOneToOneVideoToFollower extends TestBase{
 	
-	public final Logger log = LoggerHelper.getLogger(SendTextMessageToAdmin.class);
+	public final Logger log = LoggerHelper.getLogger(SendOneToOneVideoToFollower.class);
 	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
 	@Test(dataProvider = "Send one to one video to follower")
-	public void sendOneToOneImageToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
+	public void sendOneToOneVideoToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
 		}
@@ -49,7 +49,7 @@ public class SendOneToOneVideoToFollower extends TestBase{
 	}
 	
 	@DataProvider(name = "Send one to one video to follower")
-	public Object[][] getMessageForFollower() throws Exception{
+	public Object[][] getVideoForFollower() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessageOneToOne");
 		return dataSet;
 	}

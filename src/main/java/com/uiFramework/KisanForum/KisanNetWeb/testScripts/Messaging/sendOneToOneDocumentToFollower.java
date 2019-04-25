@@ -13,14 +13,14 @@ import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
-public class SendOneToOneImageToFollower extends TestBase{
+public class sendOneToOneDocumentToFollower extends TestBase {
 
-	public final Logger log = LoggerHelper.getLogger(SendOneToOneImageToFollower.class);
+	public final Logger log = LoggerHelper.getLogger(sendOneToOneDocumentToFollower.class);
 	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
-	@Test(dataProvider = "Send one to one image to follower")
-	public void sendOneToOneImageToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
+	@Test(dataProvider = "Send one to one document to follower")
+	public void sendOneToOneDocumentToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
 		}
@@ -37,20 +37,20 @@ public class SendOneToOneImageToFollower extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnFirstFollowerFromOneToOneChatList();
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnImageOption();
-			
-		fileUpload.CopyFilePath("Image For Followers.jpg");
+		channelChatWindow.clickOnDocumentOption();
+		
+		fileUpload.CopyFilePath("Document For Followers.docx");
 		fileUpload.PasteFilePath();
 		fileUpload.ClickEnter();
 		
-		channelChatWindow.addCaptionForMedia(message);
 		channelChatWindow.clickOnSendImageOrVideoButton();
 		Thread.sleep(5000);
 	}
 	
-	@DataProvider(name = "Send one to one image to follower")
-	public Object[][] getImageForFollower() throws Exception{
+	@DataProvider(name = "Send one to one document to follower")
+	public Object[][] getDocumentForFollower() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessageOneToOne");
 		return dataSet;
 	}
+
 }

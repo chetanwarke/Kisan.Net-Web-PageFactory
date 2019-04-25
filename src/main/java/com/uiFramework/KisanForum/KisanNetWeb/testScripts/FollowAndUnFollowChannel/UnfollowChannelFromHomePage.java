@@ -16,7 +16,7 @@ public class UnfollowChannelFromHomePage extends TestBase{
 	
 	private final Logger log = Logger.getLogger(UnfollowChannelFromHomePage.class);
 	
-	@Test(dataProvider = "Channel To Be Unfollowed")
+	@Test(dataProvider = "Channel To Be Unfollowed",groups = "UnfollowFromHomePage", dependsOnGroups = "UnfollowFromDiscover")
 	public void unfollowChannelFromHomePage(String emailId, String password, String channelName, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");

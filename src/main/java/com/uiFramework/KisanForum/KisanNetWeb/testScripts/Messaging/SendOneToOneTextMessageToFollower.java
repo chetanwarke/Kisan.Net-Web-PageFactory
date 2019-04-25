@@ -15,7 +15,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class SendOneToOneTextMessageToFollower extends TestBase{
 	
-public final Logger log = LoggerHelper.getLogger(SendTextMessageToAdmin.class);
+public final Logger log = LoggerHelper.getLogger(SendOneToOneTextMessageToFollower.class);
 	
 	@Test(dataProvider = "Send one to one text message to follower")
 	public void sendTextMessageToAdmin(String emailId, String password, String channelName, String message, String runMode) throws Exception {

@@ -242,14 +242,16 @@ public class ChannelChatWindow {
 		selectLocationHeader.click();
 	}	
 	
-	public void clickOnCurrentLocation() {
-		log.info("Clicking on current location header");
-		logExtentReport("Clicking on current location header");
+	public void clickOnCurrentLocation() throws Exception {
+		Thread.sleep(2000);
+		log.info("Clicking on current location");
+		logExtentReport("Clicking on current location");
 		waitHelper.waitForElementVisible(currentLocation, ObjectReader.reader.getExplicitWait());
 		currentLocation.click();
 	}
 	
-	public void clickOnSendLocationButton() {
+	public void clickOnSendLocationButton() throws Exception {
+		Thread.sleep(2000);
 		log.info("Clicking on send location button");
 		logExtentReport("Clicking on send location button");
 		waitHelper.waitForElementVisible(sendLocationButton, ObjectReader.reader.getExplicitWait());
@@ -359,8 +361,13 @@ public class ChannelChatWindow {
 		
 		int i = 1;
 		while(verificationHelper.isDisplayed(blockedFollowerText)) {
-			oneToOneChatList.get(i).click();
-			i = i + 1;
+			if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+				oneToOneChatList.get(i).click();
+				i = i + 1;
+			}
+			else {
+				log.info("Follower list is still loading");
+			}			
 		}
 		
 	}
