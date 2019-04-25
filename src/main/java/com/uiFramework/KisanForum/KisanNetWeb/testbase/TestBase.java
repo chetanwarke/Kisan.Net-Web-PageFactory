@@ -115,10 +115,10 @@ public class TestBase {
 	
 	@AfterTest
 	public void afterTest() throws Exception{
-		if(driver!=null){
+		/*if(driver!=null){
 			//driver.manage().deleteAllCookies();
 			//driver.quit();
-		}
+		}*/
 	}
 	
 	

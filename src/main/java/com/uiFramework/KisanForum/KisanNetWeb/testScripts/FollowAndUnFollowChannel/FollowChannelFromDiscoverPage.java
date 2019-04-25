@@ -17,7 +17,7 @@ public class FollowChannelFromDiscoverPage extends TestBase{
 	
 	private final Logger log = LoggerHelper.getLogger(FollowChannelFromDiscoverPage.class);
 	
-	@Test(dataProvider = "Follow Channel From Discover", description = "Follow channel from discover page")
+	@Test(dataProvider = "Follow Channel From Discover", description = "Follow channel from discover page",groups = "FollowFromDiscover")
 	public void followChannelFromDiscoverPage(String emailId, String password, String channelName, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");

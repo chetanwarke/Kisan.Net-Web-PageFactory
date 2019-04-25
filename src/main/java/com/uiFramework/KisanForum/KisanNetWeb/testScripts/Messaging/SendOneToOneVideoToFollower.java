@@ -13,14 +13,14 @@ import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
-public class SendOneToOneImageToFollower extends TestBase{
-
-	public final Logger log = LoggerHelper.getLogger(SendOneToOneImageToFollower.class);
+public class SendOneToOneVideoToFollower extends TestBase{
+	
+	public final Logger log = LoggerHelper.getLogger(SendOneToOneVideoToFollower.class);
 	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
-	@Test(dataProvider = "Send one to one image to follower")
-	public void sendOneToOneImageToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
+	@Test(dataProvider = "Send one to one video to follower")
+	public void sendOneToOneVideoToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
 		}
@@ -37,9 +37,9 @@ public class SendOneToOneImageToFollower extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnFirstFollowerFromOneToOneChatList();
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnImageOption();
+		channelChatWindow.clickOnVideoOption();
 			
-		fileUpload.CopyFilePath("Image For Followers.jpg");
+		fileUpload.CopyFilePath("Video For Followers.mp4");
 		fileUpload.PasteFilePath();
 		fileUpload.ClickEnter();
 		
@@ -48,9 +48,10 @@ public class SendOneToOneImageToFollower extends TestBase{
 		Thread.sleep(5000);
 	}
 	
-	@DataProvider(name = "Send one to one image to follower")
-	public Object[][] getImageForFollower() throws Exception{
+	@DataProvider(name = "Send one to one video to follower")
+	public Object[][] getVideoForFollower() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessageOneToOne");
 		return dataSet;
 	}
+
 }

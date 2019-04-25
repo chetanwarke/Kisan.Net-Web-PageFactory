@@ -13,14 +13,14 @@ import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
-public class SendOneToOneImageToFollower extends TestBase{
-
-	public final Logger log = LoggerHelper.getLogger(SendOneToOneImageToFollower.class);
+public class SendOneToOneAudioToFollower extends TestBase{
+	
+	public final Logger log = LoggerHelper.getLogger(SendOneToOneAudioToFollower.class);
 	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
-	@Test(dataProvider = "Send one to one image to follower")
-	public void sendOneToOneImageToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
+	@Test(dataProvider = "Send one to one audio to follower")
+	public void sendOneToOneAudioToFollower(String emailId, String password, String channelName, String message, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
 		}
@@ -37,20 +37,21 @@ public class SendOneToOneImageToFollower extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnFirstFollowerFromOneToOneChatList();
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnImageOption();
+		channelChatWindow.clickOnAudioOption();
+		channelChatWindow.clickOnChooseAudioOption();
 			
-		fileUpload.CopyFilePath("Image For Followers.jpg");
+		fileUpload.CopyFilePath("Audio For Followers.mp3");
 		fileUpload.PasteFilePath();
 		fileUpload.ClickEnter();
 		
-		channelChatWindow.addCaptionForMedia(message);
-		channelChatWindow.clickOnSendImageOrVideoButton();
+		channelChatWindow.clickOnSendAudioButton();
 		Thread.sleep(5000);
 	}
 	
-	@DataProvider(name = "Send one to one image to follower")
-	public Object[][] getImageForFollower() throws Exception{
+	@DataProvider(name = "Send one to one audio to follower")
+	public Object[][] getAudioForFollower() throws Exception{
 		Object[][] dataSet = getExcelData("Kisan.NetTestData.xlsx", "SendMessageOneToOne");
 		return dataSet;
 	}
+
 }

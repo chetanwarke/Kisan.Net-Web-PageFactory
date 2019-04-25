@@ -15,7 +15,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class SendAudioToFollowers extends TestBase{
 
-	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
+	private final Logger log = LoggerHelper.getLogger(SendAudioToFollowers.class);
 	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Send audio to channel followers")
