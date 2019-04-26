@@ -3,14 +3,6 @@
 <suite name="AllTests">
     
   <test name="AppDownloadValidInvite">
-      <groups>
-          <run>
-            <include name = "FollowFromDiscover" />
-            <include name = "UnfollowFromDiscover" />
-            <include name = "FollowFromProfile" />
-            <include name = "UnfollowFromHomePage" />
-         </run>
-      </groups>
     <packages>
       <package name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.*"/>  
     </packages>
