@@ -175,12 +175,13 @@ public class DiscoverPage {
 		return i;
 	}
 	
-	public void clickOnChannelName(String channelName) {
+	public void clickOnChannelName(String channelName) throws Exception {
 		List<WebElement> channelList = getChannelList();
 		int i;
 		for(i=0; i<channelList.size(); i++) {
 			if(channelList.get(i).getText().equals(channelName)) {
 				channelList.get(i).click();
+				Thread.sleep(3000);
 				break;
 			}
 			else {
