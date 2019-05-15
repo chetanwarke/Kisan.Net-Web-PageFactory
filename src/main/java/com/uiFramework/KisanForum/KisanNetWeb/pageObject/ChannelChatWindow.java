@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.alert.AlertHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper;
@@ -322,7 +323,7 @@ public class ChannelChatWindow {
 		log.info("Adding caption for file");
 		logExtentReport("Adding caption for file");
 		waitHelper.waitForElementVisible(addACaption, ObjectReader.reader.getExplicitWait());
-		addACaption.sendKeys(message);
+		addACaption.sendKeys(message);		
 	}
 	
 	public void clickOnSendImageOrVideoButton() {

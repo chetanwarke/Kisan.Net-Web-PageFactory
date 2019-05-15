@@ -17,6 +17,15 @@ public class WindowHelper {
 	}
 
 	/**
+	 * This method will get all the window handles
+	 */
+	
+	public Set<String> getAllWindowHandles(){
+		Set<String> windows = driver.getWindowHandles();
+		return windows;
+	}
+	
+	/**
 	 * This method will switch to parent window
 	 */
 	public void switchToParentWindow() {

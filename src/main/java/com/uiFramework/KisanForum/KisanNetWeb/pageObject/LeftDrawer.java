@@ -1,11 +1,13 @@
 package com.uiFramework.KisanForum.KisanNetWeb.pageObject;
 
 import java.util.List;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,6 +19,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config
 import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.window.WindowHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class LeftDrawer {
@@ -26,6 +29,7 @@ public class LeftDrawer {
 	WaitHelper waitHelper;
 	VerificationHelper verificationHelper;
 	JavaScriptHelper javaScriptHelper;
+	WindowHelper windowHelper;
 	
 	@FindBy(css = "a[class= 'clickUserProfile']")
 	WebElement userProfileImage;
@@ -38,6 +42,12 @@ public class LeftDrawer {
 	
 	@FindAll(@FindBy(xpath = "//mat-list-item[@class='pad-tb-sm mat-list-item mat-list-item-avatar mat-list-item-with-avatar']"))
 	List<WebElement> allChannelList1;
+	
+	@FindBy(xpath = "//h2/child::span[@class='ng-star-inserted']")
+	WebElement totalChannels;
+	
+	@FindBy(xpath = "//mat-dialog-content[@class='mat-dialog-content']")
+	WebElement channelListScrollbar;
 	
 	@FindBy(xpath = "//a[contains(text(),'Channel Profile')]")
 	WebElement btnChannelProfile;
@@ -74,6 +84,7 @@ public class LeftDrawer {
 		waitHelper = new WaitHelper(driver);
 		verificationHelper = new VerificationHelper(driver);
 		javaScriptHelper = new JavaScriptHelper(driver);
+		windowHelper = new WindowHelper(driver);
 		//new TestBase().getNavigationScreen("LeftDrawer", driver);
 		TestBase.logExtentReport("Left drawer object created");
 		log.info("Left drawer object created");
@@ -95,6 +106,15 @@ public class LeftDrawer {
 		}
 	}
 	
+	public int getTotalChannlesFollowed() {
+		log.info("Getting total channels followed");
+		logExtentReport("Getting total channels followed");
+		System.out.println(totalChannels.getText());
+		String substring = totalChannels.getText().substring(2);
+		int totalChannelCount = Integer.parseInt(substring);
+		return totalChannelCount;
+	}
+	
 	public void clickOnViewAllButton() {
 		log.info("Clicking on view all button");
 		logExtentReport("Clicking on view all button");
@@ -102,29 +122,30 @@ public class LeftDrawer {
 		btnViewAll.click();
 	}
 	
-	public void clickOnChannelName(String channelName) throws Exception {
+	public void clickOnChannelName(String channelName, int totalChannelCount) throws Exception {
 		log.info("Clicking on channel name in view all channels list");
 		logExtentReport("Clicking on channel name in view all channels list");
 		waitHelper.waitForAllElement(allChannelList, ObjectReader.reader.getExplicitWait());
 		
-		int totalChannels = allChannelList1.size();
-		System.out.println(totalChannels);
-		for(int i = 0; i<totalChannels;i++) {
-			System.out.println(allChannelList1.get(i).getText());
+		for(int i = 0; i < totalChannelCount; i++) {
+			javaScriptHelper.scrollIntoView(allChannelList1.get(allChannelList1.size()-1));
+			waitHelper.waitForAllElement(allChannelList, ObjectReader.reader.getExplicitWait());
+			//totalChannels = allChannelList1.size();
+			i = allChannelList1.size();
 		}
-		//javaScriptHelper.scrollIntoViewAndClick(allChannelList1.get(7));
-		//Thread.sleep(15000);
-		for(int i =0; i<totalChannels;i++) {
+		
+		for(int i =0; i<totalChannelCount;i++) {
 			if(allChannelList1.get(i).getText().equals(channelName)){
 				allChannelList1.get(i).click();
 				break;
 			}
 			else {
-				javaScriptHelper.scrollIntoViewAndClick(allChannelList1.get(i));
 				continue;
+				}
+				
 			}
-		}
-		Thread.sleep(10000);
+		
+		Thread.sleep(5000);
 	}
 	
 	public void clickOnChannelProfileButton() {

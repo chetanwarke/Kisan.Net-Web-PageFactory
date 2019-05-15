@@ -3,9 +3,24 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifySupportPage"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifyAboutAppPage"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.verifyTitle"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneTextMessageToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneAudioToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendPostToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneImageToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneVideoToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneLocationToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToAdmin"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

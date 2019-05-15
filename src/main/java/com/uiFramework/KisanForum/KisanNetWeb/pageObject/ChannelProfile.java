@@ -75,7 +75,7 @@ public class ChannelProfile {
 		waitHelper = new WaitHelper(driver);
 		verificationHelper = new VerificationHelper(driver);
 		//waitHelper.waitForElementVisible(channelName, ObjectReader.reader.getExplicitWait());
-		new TestBase().getNavigationScreen("ChannelProfile",driver);
+		//new TestBase().getNavigationScreen("ChannelProfile",driver);
 		TestBase.logExtentReport("Channel Profile Page Object Created");
 	}
 	
@@ -84,6 +84,7 @@ public class ChannelProfile {
 	}
 	
 	public void clickOnRightOptionMenu() throws Exception {
+		Thread.sleep(2000);
 		log.info("Clicking on channel profile right option menu");
 		logExtentReport("Clicking on channel profile right option menu");
 		if(!(waitHelper.WaitForElementDisapper(loadingOverlay))){
@@ -130,11 +131,12 @@ public class ChannelProfile {
 		btnBlockedFollowers.click();	
 	}
 	
-	public void clickOnUnfollowChannelOption() {
+	public void clickOnUnfollowChannelOption() throws Exception {
 		log.info("Clicking on unfollow button");
 		logExtentReport("Clicking on unfollow button");
 		waitHelper.waitForElementVisible(btnUnfollowChannel, ObjectReader.reader.getExplicitWait());
 		btnUnfollowChannel.click();
+		Thread.sleep(2000);
 	}
 	
 	public void clickOnYesButtonOnPopup() {
@@ -169,12 +171,13 @@ public class ChannelProfile {
 		return new VerificationHelper(driver).isDisplayed(channelFollowedToast);
 	}
 	
-	public boolean verifyChannelUnfollowedToast() {
+	public boolean verifyChannelUnfollowedToast() throws Exception {
 		log.info("Verifying channel unfollowed toast");
 		logExtentReport("Verifying channel unfollowed toast");
 		boolean status = false;
 		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
 			status = verificationHelper.isDisplayed(channelUnfollowedToast);
+			Thread.sleep(2000);
 			return status;
 		}
 		else {

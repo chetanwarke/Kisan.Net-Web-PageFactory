@@ -32,8 +32,9 @@ public class UnfollowChannelFromUserProfile extends TestBase{
 		
 		LeftDrawer leftDrawer = new LeftDrawer(driver);
 		leftDrawer.clickOnUserProfileImage();
+		int totalChannelsFollowed = leftDrawer.getTotalChannlesFollowed();
 		leftDrawer.clickOnViewAllButton();
-		leftDrawer.clickOnChannelName(channelName);
+		leftDrawer.clickOnChannelName(channelName,totalChannelsFollowed);
 		leftDrawer.clickOnChannelProfileButton();
 		
 		ChannelProfile channelProfile = new ChannelProfile(driver);
