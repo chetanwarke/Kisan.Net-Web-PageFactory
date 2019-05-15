@@ -7,13 +7,12 @@ import java.awt.event.KeyEvent;
 
 import org.apache.log4j.Logger;
 
-import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.resource.ResourceHelper;
 
 public class FileUploadHelper {
-
-	private static Logger log = LoggerHelper.getLogger(AssertionHelper.class);
+	
+	private static Logger log = LoggerHelper.getLogger(LoggerHelper.class);
 	static Robot robot;
 
 
