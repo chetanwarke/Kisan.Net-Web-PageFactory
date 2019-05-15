@@ -108,9 +108,9 @@
 						<suiteXmlFile>src/main/resources/testSuite/AppDownloadInvite.xml</suiteXmlFile>
 						<suiteXmlFile>testNG.xml</suiteXmlFile>
 					</suiteXmlFiles> 
-					<suiteXmlFiles>
+					<!-- suiteXmlFiles>
 						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-					</suiteXmlFiles>
+					</suiteXmlFiles>-->
 				</configuration>
 			</plugin>
 		</plugins>
