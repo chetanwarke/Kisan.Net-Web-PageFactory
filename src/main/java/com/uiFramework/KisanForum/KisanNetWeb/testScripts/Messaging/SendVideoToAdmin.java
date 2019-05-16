@@ -48,7 +48,6 @@ public class SendVideoToAdmin extends TestBase{
 		channelChatWindow.addCaptionForMedia(message);
 		channelChatWindow.clickOnSendImageOrVideoButton();
 		Thread.sleep(5000);
-		System.out.println("testing pull");
 	}
 	
 	@DataProvider(name = "Send video to channel admin")
