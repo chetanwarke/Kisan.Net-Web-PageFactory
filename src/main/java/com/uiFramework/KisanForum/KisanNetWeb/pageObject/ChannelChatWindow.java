@@ -129,6 +129,10 @@ public class ChannelChatWindow {
 	@FindBy(xpath = "//div[contains(text(),' You can not send and receive messages to this user')]")
 	WebElement blockedFollowerText;
 	
+	@FindBy(xpath = "//span[contains(text(),'Broadcast')]")
+	WebElement broadcastText;
+	
+	
 	public static By allOneToOneChats = By.xpath("//h3");
 	
 	
@@ -372,4 +376,14 @@ public class ChannelChatWindow {
 		}
 		
 	}
+	
+	public void clickOnBroadcastTextInHeader() throws InterruptedException {
+		Thread.sleep(2000);		// added to pause execution to avoid ui disturbance
+		log.info("Clicking on broadcast text in header");
+		logExtentReport("Clicking on broadcast text in header");
+		waitHelper.waitForElementVisible(broadcastText, ObjectReader.reader.getExplicitWait());
+		broadcastText.click();
+	}
+	
+	
 }

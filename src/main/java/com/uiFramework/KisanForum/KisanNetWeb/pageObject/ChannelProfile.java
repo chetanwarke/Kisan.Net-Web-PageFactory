@@ -1,8 +1,13 @@
 package com.uiFramework.KisanForum.KisanNetWeb.pageObject;
 
+
+
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aventstack.extentreports.Status;
@@ -19,8 +24,8 @@ public class ChannelProfile {
 	VerificationHelper verificationHelper;
 	private final Logger log = LoggerHelper.getLogger(ChannelProfile.class);
 	
-	@FindBy(css = "i[class='zmdi zmdi-more-vert']")
-	WebElement rightOptionMenu1;
+	@FindBy(xpath = "(//div[@class='rightsideIconDropdown'])[1]/child::button")
+	WebElement rightOptionMenuForAdmin;
 	
 	@FindBy(xpath = "//div[@class='rightsideIconDropdown']/child::button")
 	WebElement rightOptionMenu;
@@ -67,7 +72,32 @@ public class ChannelProfile {
 	@FindBy(xpath = "//div[@aria-label='Channel left successfully.']")
 	WebElement channelUnfollowedToast;
 	
+	@FindBy(xpath = "//div[@class='colorBucket']")
+	WebElement colorBucket;
 	
+	@FindBy(css = ".hex-text > div:nth-child(1) > input:nth-child(1)")
+	WebElement setHexColorTextBox;
+	
+	@FindBy(xpath = "//button[contains(text(),'OK')]")
+	WebElement btnOKSetBackgroundColor;
+	
+	@FindBy(xpath = "//textarea[@placeholder='Max.140 character']")
+	WebElement channelDescription;
+	
+	@FindBy(xpath = "//img[@id='myImg']")
+	WebElement channelProfileImage;
+	
+	@FindBy(xpath = "//input[@id='channelName']")
+	WebElement editChannelName;
+	
+	@FindBy(xpath = "//button[contains(text(),'Crop')]")
+	WebElement cropChannelProfileImage;
+	
+	@FindBy(xpath = "//a[contains(text(),'Add More ')]")
+	WebElement addMoreCategories;
+	
+	@FindBy(xpath = "//a[contains(text(),'Done')]")
+	WebElement btnDone;
 	
 	public ChannelProfile(WebDriver driver) {
 		this.driver = driver;
@@ -93,7 +123,18 @@ public class ChannelProfile {
 		else {
 			log.info("Channle profile is still loading");
 		}
-		//waitHelper.setImplicitWait(20, TimeUnit.SECONDS);
+	}
+	
+	public void clickOnRightOptionMenuForAdmin() throws Exception {
+		Thread.sleep(2000);
+		log.info("Clicking on channel profile right option menu");
+		logExtentReport("Clicking on channel profile right option menu");
+		if(!(waitHelper.WaitForElementDisapper(loadingOverlay))){
+		rightOptionMenuForAdmin.click();
+		}
+		else {
+			log.info("Channle profile is still loading");
+		}
 	}
 
 	public void clickOnCloseButton() {
@@ -185,4 +226,84 @@ public class ChannelProfile {
 			return status;
 		}
 	}
+	
+	public void clickOnColorBucket() {
+		log.info("Clicking on color bucket");
+		logExtentReport("Clicking on color bucket");
+		waitHelper.waitForElementVisible(colorBucket, 10);
+		colorBucket.click();
+	}
+	
+	public void setBackgroundColorCode(String colorCode) {
+		log.info("Setting background color");
+		logExtentReport("Setting background color");
+		waitHelper.waitForElementVisible(setHexColorTextBox, 10);
+		setHexColorTextBox.click();
+		setHexColorTextBox.clear();
+		setHexColorTextBox.sendKeys(colorCode);
+	}
+	
+	public void clickOnOkButtonOnSetBackground() {
+		log.info("Clicking on color bucket");
+		logExtentReport("Clicking on color bucket");
+		waitHelper.waitForElementVisible(btnOKSetBackgroundColor, 10);
+		btnOKSetBackgroundColor.click();
+	}
+	
+	public void enterChannelName(String channelName) throws Exception {
+		log.info("Entering channel name");
+		logExtentReport("Entering channel name");
+		waitHelper.waitForElementVisible(editChannelName, 10);
+		editChannelName.click();
+		editChannelName.clear();
+		Thread.sleep(1000);
+		editChannelName.sendKeys(channelName);
+	}
+	
+	public void enterChannelDescription(String channelDescription) {
+		log.info("Entering channel description");
+		logExtentReport("Entering channel description");
+		waitHelper.waitForElementVisible(this.channelDescription, 10);
+		this.channelDescription.click();
+		this.channelDescription.clear();
+		this.channelDescription.sendKeys(channelDescription);
+	}
+	
+	public void clickOnChannelProfilImage() {
+		log.info("Clicking on channel profile image");
+		logExtentReport("Clicking on channel profile image");
+		waitHelper.waitForElementVisible(channelProfileImage, 10);
+		channelProfileImage.click();
+	}
+	
+	public void clickOnCropProfileImageButton() {
+		log.info("Clicking on crop channel profile image button");
+		logExtentReport("Clicking on crop channel profile image button");
+		waitHelper.waitForElementVisible(cropChannelProfileImage, 10);
+		cropChannelProfileImage.click();
+	}
+	
+	public void clickOnAddMoreCategoriesButton() {
+		log.info("Clicking on add more categories button");
+		logExtentReport("Clicking on add more categories button");
+		waitHelper.waitForElementVisible(addMoreCategories, 10);
+		addMoreCategories.click();
+	}
+	
+	public void clickOnDoneButton() {
+		log.info("Clicking on done button");
+		logExtentReport("Clicking on done button");
+		waitHelper.WaitForElementClickable(btnDone, 10);
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			btnDone.click();
+		}
+		else {
+			log.info("Channle profile is still loading");
+		}
+				
+	}
+		
+	
+	
+	
 }
