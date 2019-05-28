@@ -218,7 +218,7 @@ public class LeftDrawer {
 		}
 	}
 	
-	public void clickOnMyChannelOption() {
+	public void clickOnMyChannelOption() throws Exception {
 		log.info("Clicking on my channel option");
 		logExtentReport("Clicking on my channel option");
 		waitHelper.WaitForElementClickable(optionMyChannel, ObjectReader.reader.getExplicitWait());
@@ -228,5 +228,6 @@ public class LeftDrawer {
 		else {
 			log.info("Left drawer is still loading");
 		}
+		Thread.sleep(1000);
 	}
 }

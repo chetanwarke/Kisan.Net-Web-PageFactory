@@ -32,6 +32,9 @@ public class ChannelDashboard {
 	@FindBy(xpath = "//div[@class='loadingoverlay']")
 	WebElement loadingOverlay;
 	
+	@FindBy(xpath = "//a[@class='font-bold-five']")
+	WebElement channelNameInHeaderForAdmin;
+	
 	public ChannelDashboard(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -66,6 +69,17 @@ public class ChannelDashboard {
 			log.info("Left drawer is still loading");
 		}
 		
+	}
+	
+	public void clickOnChannelNameInHeaderForAdmin() {
+		log.info("Clicking on channel name in header for admin");
+		logExtentReport("Clicking on channel name in header for admin");
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			channelNameInHeaderForAdmin.click();
+		}
+		else {
+			log.info("Page is still loading");
+		}
 	}
 	
 	

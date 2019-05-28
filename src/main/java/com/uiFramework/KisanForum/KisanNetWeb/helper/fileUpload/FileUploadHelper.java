@@ -31,7 +31,7 @@ public class FileUploadHelper {
 			String path = getFilePath.getFilePath(fileName);*/
 			
 			String path = ResourceHelper.getResourcePath("src\\main\\resources\\configfile\\")+fileName;
-			log.info("csv location "+path);
+			log.info("File Location "+path);
 			
 			StringSelection filepath = new StringSelection(path);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepath, null);
@@ -51,7 +51,6 @@ public class FileUploadHelper {
 	}
 
 	public void ClickEnter() {
-
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
