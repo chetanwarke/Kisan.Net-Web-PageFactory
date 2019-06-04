@@ -30,7 +30,7 @@ public class FileUploadHelper {
 			/*FileUploadHelper getFilePath = new FileUploadHelper();
 			String path = getFilePath.getFilePath(fileName);*/
 			
-			String path = ResourceHelper.getResourcePath("src\\main\\resources\\configfile\\")+fileName;
+			String path = ResourceHelper.getResourcePath("src\\main\\resources\\testData\\")+fileName;
 			log.info("File Location "+path);
 			
 			StringSelection filepath = new StringSelection(path);

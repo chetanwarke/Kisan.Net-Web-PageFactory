@@ -237,7 +237,7 @@ public class TestBase {
 	}
 	
 	public Object[][] getExcelData(String excelName, String sheetName) throws Exception{
-		String excelLocation = ResourceHelper.getResourcePath("src/main/resources/configfile/")+excelName;
+		String excelLocation = ResourceHelper.getResourcePath("src/main/resources/testData/")+excelName;
 		log.info("excel location "+excelLocation);
 		ExcelHelper excelHelper = new ExcelHelper();
 		Object[][] data = excelHelper.getExcelData1(excelLocation, sheetName);
