@@ -17,7 +17,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendImageToAdmin extends TestBase{
 
 	private final Logger log = LoggerHelper.getLogger(SendImageToAdmin.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Send image to channel admin")
 	public void sendImageToAdmin(String emailId, String password, String channelName, String message, String runMode) throws Exception {
@@ -41,10 +40,11 @@ public class SendImageToAdmin extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnImageOption();
-			
-		fileUpload.CopyFilePath("Image For Followers.jpg");
+		channelChatWindow.uploadImage("Image For Followers.jpg");
+		
+		/*fileUpload.CopyFilePath("Image For Followers.jpg");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.addCaptionForMedia(message);
 		channelChatWindow.clickOnSendImageOrVideoButton();

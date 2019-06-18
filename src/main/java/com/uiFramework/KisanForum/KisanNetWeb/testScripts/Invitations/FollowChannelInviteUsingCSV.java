@@ -18,7 +18,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class FollowChannelInviteUsingCSV extends TestBase{
 	
 	private final Logger log = LoggerHelper.getLogger(FollowChannelInviteUsingCSV.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Get Channel Name", description = "Invite to follow channel using csv")
 	public void inviteToFollowChannelByCSV(String emailId, String password, String channelName, String mobileNumber, String runMode) throws Exception {
@@ -44,10 +43,10 @@ public class FollowChannelInviteUsingCSV extends TestBase{
 		
 		InvitePage invitePage = new InvitePage(driver);
 		invitePage.clickOnUploadCSVFile();
-		
-		fileUpload.CopyFilePath("sampleCSVfileForAppDownload.csv");
+		invitePage.uploadCSV("sampleCSVfileForAppDownload.csv");
+		/*fileUpload.CopyFilePath("sampleCSVfileForAppDownload.csv");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		invitePage.clickOnSendCSVInviteButton();
 		

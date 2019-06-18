@@ -16,7 +16,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendOneToOneAudioToFollower extends TestBase{
 	
 	public final Logger log = LoggerHelper.getLogger(SendOneToOneAudioToFollower.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
 	@Test(dataProvider = "Send one to one audio to follower")
@@ -39,10 +38,11 @@ public class SendOneToOneAudioToFollower extends TestBase{
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnAudioOption();
 		channelChatWindow.clickOnChooseAudioOption();
-			
-		fileUpload.CopyFilePath("Audio For Followers.mp3");
+		channelChatWindow.uploadAudio("Audio For Followers.mp3");	
+		
+		/*fileUpload.CopyFilePath("Audio For Followers.mp3");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.clickOnSendAudioButton();
 		Thread.sleep(5000);

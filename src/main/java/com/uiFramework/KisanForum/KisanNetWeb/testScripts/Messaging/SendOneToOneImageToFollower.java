@@ -16,7 +16,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendOneToOneImageToFollower extends TestBase{
 
 	public final Logger log = LoggerHelper.getLogger(SendOneToOneImageToFollower.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
 	@Test(dataProvider = "Send one to one image to follower")
@@ -38,10 +37,11 @@ public class SendOneToOneImageToFollower extends TestBase{
 		channelChatWindow.clickOnFirstFollowerFromOneToOneChatList();
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnImageOption();
-			
-		fileUpload.CopyFilePath("Image For Followers.jpg");
+		channelChatWindow.uploadImage("Image For Followers.jpg");	
+		
+		/*fileUpload.CopyFilePath("Image For Followers.jpg");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.addCaptionForMedia(message);
 		channelChatWindow.clickOnSendImageOrVideoButton();

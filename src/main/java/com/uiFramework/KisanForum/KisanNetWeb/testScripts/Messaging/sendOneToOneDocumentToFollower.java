@@ -16,7 +16,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class sendOneToOneDocumentToFollower extends TestBase {
 
 	public final Logger log = LoggerHelper.getLogger(sendOneToOneDocumentToFollower.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
 	@Test(dataProvider = "Send one to one document to follower")
@@ -38,10 +37,11 @@ public class sendOneToOneDocumentToFollower extends TestBase {
 		channelChatWindow.clickOnFirstFollowerFromOneToOneChatList();
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnDocumentOption();
+		channelChatWindow.uploadDocument("Document For Followers.docx");
 		
-		fileUpload.CopyFilePath("Document For Followers.docx");
+		/*fileUpload.CopyFilePath("Document For Followers.docx");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.clickOnSendImageOrVideoButton();
 		Thread.sleep(5000);

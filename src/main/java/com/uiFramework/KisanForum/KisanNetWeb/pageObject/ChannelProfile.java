@@ -2,17 +2,15 @@ package com.uiFramework.KisanForum.KisanNetWeb.pageObject;
 
 
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aventstack.extentreports.Status;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
@@ -22,6 +20,7 @@ public class ChannelProfile {
 	WebDriver driver;
 	WaitHelper waitHelper;
 	VerificationHelper verificationHelper;
+	FileUploadHelper fileUploadHelper;
 	private final Logger log = LoggerHelper.getLogger(ChannelProfile.class);
 	
 	@FindBy(xpath = "(//div[@class='rightsideIconDropdown'])[1]/child::button")
@@ -87,6 +86,9 @@ public class ChannelProfile {
 	@FindBy(xpath = "//img[@id='myImg']")
 	WebElement channelProfileImage;
 	
+	@FindBy(xpath = "//input[@name='channelImg']")
+	WebElement channelProfileImageInput;
+	
 	@FindBy(xpath = "//input[@id='channelName']")
 	WebElement editChannelName;
 	
@@ -104,6 +106,7 @@ public class ChannelProfile {
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
 		verificationHelper = new VerificationHelper(driver);
+		fileUploadHelper = new FileUploadHelper(driver);
 		//waitHelper.waitForElementVisible(channelName, ObjectReader.reader.getExplicitWait());
 		//new TestBase().getNavigationScreen("ChannelProfile",driver);
 		TestBase.logExtentReport("Channel Profile Page Object Created");
@@ -276,6 +279,12 @@ public class ChannelProfile {
 		channelProfileImage.click();
 	}
 	
+	public void uploadImage(String fileName) throws InterruptedException {
+		log.info("Uploading image");
+		logExtentReport("Uploading image");
+		fileUploadHelper.uploadFile(channelProfileImage, channelProfileImageInput, fileName);
+	}
+	
 	public void clickOnCropProfileImageButton() {
 		log.info("Clicking on crop channel profile image button");
 		logExtentReport("Clicking on crop channel profile image button");
@@ -302,8 +311,5 @@ public class ChannelProfile {
 		}
 				
 	}
-		
-	
-	
-	
+			
 }

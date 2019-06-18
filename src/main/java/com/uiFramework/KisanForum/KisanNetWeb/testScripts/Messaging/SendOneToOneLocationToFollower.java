@@ -16,7 +16,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendOneToOneLocationToFollower extends TestBase{
 
 	public final Logger log = LoggerHelper.getLogger(SendOneToOneLocationToFollower.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 
 	
 	@Test(dataProvider = "Send one to one location to follower")
