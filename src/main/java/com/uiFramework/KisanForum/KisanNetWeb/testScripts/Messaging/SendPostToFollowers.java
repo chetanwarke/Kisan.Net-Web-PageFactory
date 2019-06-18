@@ -17,7 +17,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendPostToFollowers extends TestBase{
 	
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	
 	@Test(dataProvider = "Send post to channel followers")
@@ -43,10 +42,10 @@ public class SendPostToFollowers extends TestBase{
 		channelChatWindow.enterPostTitle(message);
 		channelChatWindow.enterPostDescription(message);
 		channelChatWindow.clickOnAttachPostMediaButton();
-		
-		fileUpload.CopyFilePath("Image For Followers.jpg");
+		channelChatWindow.uploadPostMedia("Image For Followers.jpg");
+		/*fileUpload.CopyFilePath("Image For Followers.jpg");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.clickOnCropPostMediaButton();
 		Thread.sleep(1000);
@@ -78,10 +77,11 @@ public class SendPostToFollowers extends TestBase{
 		channelChatWindow.enterPostTitle(message);
 		channelChatWindow.enterPostDescription(message);
 		channelChatWindow.clickOnAttachPostMediaButton();
+		channelChatWindow.uploadPostMedia("Video For Followers.mp4");
 		
-		fileUpload.CopyFilePath("Video For Followers.mp4");
+		/*fileUpload.CopyFilePath("Video For Followers.mp4");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.clickOnSendPostButton();
 		

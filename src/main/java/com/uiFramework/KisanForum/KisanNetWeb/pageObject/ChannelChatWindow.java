@@ -11,11 +11,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.alert.AlertHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.resource.ResourceHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
@@ -25,6 +25,7 @@ public class ChannelChatWindow {
 	WebDriver driver;
 	WaitHelper waitHelper;
 	VerificationHelper verificationHelper;
+	FileUploadHelper fileUploadHelper;
 	private final Logger log = LoggerHelper.getLogger(ChannelDashboard.class);
 	
 	@FindBy(xpath = "//div[@class='loadingoverlay']")
@@ -132,6 +133,20 @@ public class ChannelChatWindow {
 	@FindBy(xpath = "//span[contains(text(),'Broadcast')]")
 	WebElement broadcastText;
 	
+	@FindBy(xpath = "//input[@accept='image/*']")
+	WebElement sendImageInput;
+	
+	@FindBy(xpath = "//input[@accept='*']")
+	WebElement sendVideoInput;
+	
+	@FindBy(xpath = "//input[@accept='audio/*']")
+	WebElement sendAudioInput;
+	
+	@FindBy(xpath = "//input[@accept='.pdf, .doc, .docx']")
+	WebElement sendDocumentInput;
+	
+	@FindBy(xpath = "//input[@accept='image/*, video/*']")
+	WebElement sendPostInput;
 	
 	public static By allOneToOneChats = By.xpath("//h3");
 	
@@ -141,6 +156,7 @@ public class ChannelChatWindow {
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
 		verificationHelper = new VerificationHelper(driver);
+		fileUploadHelper = new FileUploadHelper(driver);
 		//javascriptHelper = new JavaScriptHelper(driver);  // Removing it as it is giving stale element reference
 		new TestBase().getNavigationScreen("ChannelChatWindow",driver);
 		TestBase.logExtentReport("Channel Chat Window Page Object Created");
@@ -316,7 +332,7 @@ public class ChannelChatWindow {
 	public void clickOnSendPostButton() throws Exception {
 		log.info("Clicking on send post button");
 		logExtentReport("Clicking on send post button");
-		JavaScriptHelper javascriptHelper = new JavaScriptHelper(driver);
+		//JavaScriptHelper javascriptHelper = new JavaScriptHelper(driver);
 		//javascriptHelper.scrollDownVertically();
 		//javascriptHelper.scrollIntoView(false);
 		Thread.sleep(1000);
@@ -385,5 +401,33 @@ public class ChannelChatWindow {
 		broadcastText.click();
 	}
 	
+	public void uploadImage(String fileName) throws InterruptedException {
+		log.info("Uploading image");
+		logExtentReport("Uploading image");
+		fileUploadHelper.uploadFile(imageOption, sendImageInput, fileName);
+	}
 	
+	public void uploadVideo(String fileName) throws InterruptedException {
+		log.info("Uploading video");
+		logExtentReport("Uploading video");
+		fileUploadHelper.uploadFile(videoOption, sendVideoInput, fileName);
+	}
+	
+	public void uploadAudio(String fileName) throws InterruptedException {
+		log.info("Uploading audio");
+		logExtentReport("Uploading audio");
+		fileUploadHelper.uploadFile(chooseAudioOption, sendAudioInput, fileName);
+	}
+	
+	public void uploadDocument(String fileName) throws InterruptedException {
+		log.info("Uploading document");
+		logExtentReport("Uploading document");
+		fileUploadHelper.uploadFile(documentOption, sendDocumentInput, fileName);
+	}
+	
+	public void uploadPostMedia(String fileName) throws InterruptedException {
+		log.info("Uploading post");
+		logExtentReport("Uploading post");
+		fileUploadHelper.uploadFile(postOption, sendPostInput, fileName);
+	}
 }

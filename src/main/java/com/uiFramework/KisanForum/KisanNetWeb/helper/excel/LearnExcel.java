@@ -13,7 +13,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
 public class LearnExcel {
-	@SuppressWarnings("resource")
 	public void getExcelData() throws IOException {
 		String sheetName = "Login";
 		String currentDir = System.getProperty("user.dir");

@@ -16,7 +16,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendLocationToFollowers extends TestBase{
 
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Send location to channel followers")
 	public void sendLocationToFollowers(String emailId, String password, String channelName, String message, String runMode) throws Exception {

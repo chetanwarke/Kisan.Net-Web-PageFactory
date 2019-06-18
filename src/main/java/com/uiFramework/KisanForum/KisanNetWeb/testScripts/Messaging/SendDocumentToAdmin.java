@@ -16,7 +16,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendDocumentToAdmin extends TestBase{
 	
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Send document to channel admin")
 	public void sendDocumentToAdmin(String emailId, String password, String channelName, String message, String runMode) throws Exception {
@@ -40,10 +39,10 @@ public class SendDocumentToAdmin extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnDocumentOption();
-		
-		fileUpload.CopyFilePath("Document For Followers.docx");
+		channelChatWindow.uploadDocument("Document For Followers.docx");
+		/*fileUpload.CopyFilePath("Document For Followers.docx");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.clickOnSendImageOrVideoButton();
 		Thread.sleep(5000);

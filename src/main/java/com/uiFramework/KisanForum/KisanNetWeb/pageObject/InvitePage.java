@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
@@ -16,6 +17,7 @@ public class InvitePage {
 
 	WebDriver driver;
 	WaitHelper waitHelper;
+	FileUploadHelper fileUploadHelper;
 	private final Logger log = LoggerHelper.getLogger(InvitePage.class);
 	
 	@FindBy(xpath = "//i[@class='zmdi zmdi-arrow-left']")
@@ -57,11 +59,14 @@ public class InvitePage {
 	@FindBy(xpath = "//span[contains(text(),'Please Enter 10 digit Mobile Number')]")
 	WebElement mobileValidationError;
 	
+	@FindBy(xpath = "//input[@accept='.csv']")
+	WebElement uploadCSVInput;
 	
 	public InvitePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
+		fileUploadHelper = new FileUploadHelper(driver);
 		new TestBase().getNavigationScreen("InvitePage",driver);
 		TestBase.logExtentReport("Invite page object created");	
 	}
@@ -158,5 +163,11 @@ public class InvitePage {
 		log.info("Verifying mobile validation message");
 		logExtentReport("Verifying mobile validation message");
 		return new VerificationHelper(driver).isDisplayed(mobileValidationError);
+	}
+	
+	public void uploadCSV(String fileName) throws InterruptedException {
+		log.info("Uploading csv");
+		logExtentReport("Uploading csv");
+		fileUploadHelper.uploadFile(textUploadCSVButton, uploadCSVInput, fileName);
 	}
 }

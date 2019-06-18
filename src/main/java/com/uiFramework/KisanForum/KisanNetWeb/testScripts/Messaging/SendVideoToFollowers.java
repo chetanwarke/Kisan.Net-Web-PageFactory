@@ -16,7 +16,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendVideoToFollowers extends TestBase{
 	
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Send video to channel followers")
 	public void sendVideoToFollowers(String emailId, String password, String channelName, String message, String runMode) throws Exception {
@@ -37,10 +36,11 @@ public class SendVideoToFollowers extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnVideoOption();
-				
-		fileUpload.CopyFilePath("Video For Followers.mp4");
+		channelChatWindow.uploadVideo("Video For Followers.mp4");		
+		
+		/*fileUpload.CopyFilePath("Video For Followers.mp4");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.addCaptionForMedia(message);
 		channelChatWindow.clickOnSendImageOrVideoButton();

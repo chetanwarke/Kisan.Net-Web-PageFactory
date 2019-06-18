@@ -62,7 +62,6 @@ public class ChromeBrowser {
 	public static void main(String[] args) {
 		ChromeBrowser obj = new ChromeBrowser();
 		WebDriver driver = obj.getChromeDriver(obj.getChromeOptions());
-		//driver.get("https://www.zomato.com/bangalore/punjabi-nawabi-hsr/order/LoqDdXx");
 		driver.get("https://net.kisanlab.com");
 	}
 

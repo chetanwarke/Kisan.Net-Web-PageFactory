@@ -16,7 +16,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 public class SendAudioToAdmin extends TestBase{
 
 	private final Logger log = LoggerHelper.getLogger(SendImageToFollowers.class);
-	public FileUploadHelper fileUpload = new FileUploadHelper();
+	//public FileUploadHelper fileUpload = new FileUploadHelper();
 	
 	@Test(dataProvider = "Send audio to channel admin")
 	public void sendAudioToAdmin(String emailId, String password, String channelName, String message, String runMode) throws Exception {
@@ -41,10 +41,10 @@ public class SendAudioToAdmin extends TestBase{
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnAudioOption();
 		channelChatWindow.clickOnChooseAudioOption();
-		
-		fileUpload.CopyFilePath("Audio For Followers.mp3");
+		channelChatWindow.uploadAudio("Audio For Followers.mp3");
+		/*fileUpload.CopyFilePath("Audio For Followers.mp3");
 		fileUpload.PasteFilePath();
-		fileUpload.ClickEnter();
+		fileUpload.ClickEnter();*/
 		
 		channelChatWindow.clickOnSendAudioButton();
 		Thread.sleep(5000);
