@@ -36,7 +36,7 @@ public class SendOneToOneVideoToFollower extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnFirstFollowerFromOneToOneChatList();
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnVideoOption();
+		//channelChatWindow.clickOnVideoOption();
 		channelChatWindow.uploadVideo("Video For Followers.mp4");	
 		
 		/*fileUpload.CopyFilePath("Video For Followers.mp4");

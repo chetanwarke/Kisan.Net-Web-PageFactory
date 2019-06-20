@@ -36,7 +36,7 @@ public class SendAudioToFollowers extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
 		channelChatWindow.clickOnAudioOption();
-		channelChatWindow.clickOnChooseAudioOption();
+		//channelChatWindow.clickOnChooseAudioOption();
 		channelChatWindow.uploadAudio("Audio For Followers.mp3");
 		
 		/*fileUpload.CopyFilePath("Audio For Followers.mp3");
