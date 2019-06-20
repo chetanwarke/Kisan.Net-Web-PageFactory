@@ -41,7 +41,7 @@ public class SendPostToFollowers extends TestBase{
 		
 		channelChatWindow.enterPostTitle(message);
 		channelChatWindow.enterPostDescription(message);
-		channelChatWindow.clickOnAttachPostMediaButton();
+		//channelChatWindow.clickOnAttachPostMediaButton();
 		channelChatWindow.uploadPostMedia("Image For Followers.jpg");
 		/*fileUpload.CopyFilePath("Image For Followers.jpg");
 		fileUpload.PasteFilePath();
@@ -76,7 +76,7 @@ public class SendPostToFollowers extends TestBase{
 		
 		channelChatWindow.enterPostTitle(message);
 		channelChatWindow.enterPostDescription(message);
-		channelChatWindow.clickOnAttachPostMediaButton();
+		//channelChatWindow.clickOnAttachPostMediaButton();
 		channelChatWindow.uploadPostMedia("Video For Followers.mp4");
 		
 		/*fileUpload.CopyFilePath("Video For Followers.mp4");

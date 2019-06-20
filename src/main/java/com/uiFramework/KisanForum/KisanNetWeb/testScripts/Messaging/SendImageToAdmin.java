@@ -39,7 +39,7 @@ public class SendImageToAdmin extends TestBase{
 		
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnImageOption();
+		//channelChatWindow.clickOnImageOption();
 		channelChatWindow.uploadImage("Image For Followers.jpg");
 		
 		/*fileUpload.CopyFilePath("Image For Followers.jpg");

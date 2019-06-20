@@ -38,7 +38,7 @@ public class SendDocumentToAdmin extends TestBase{
 		
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnDocumentOption();
+		//channelChatWindow.clickOnDocumentOption();
 		channelChatWindow.uploadDocument("Document For Followers.docx");
 		/*fileUpload.CopyFilePath("Document For Followers.docx");
 		fileUpload.PasteFilePath();
