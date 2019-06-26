@@ -428,6 +428,6 @@ public class ChannelChatWindow {
 	public void uploadPostMedia(String fileName) throws InterruptedException {
 		log.info("Uploading post");
 		logExtentReport("Uploading post");
-		fileUploadHelper.uploadFile(postOption, sendPostInput, fileName);
+		fileUploadHelper.uploadFile(descriptionOfPost, sendPostInput, fileName);
 	}
 }

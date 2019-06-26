@@ -36,7 +36,7 @@ public class sendOneToOneDocumentToFollower extends TestBase {
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnFirstFollowerFromOneToOneChatList();
 		channelChatWindow.clickOnAttachmentPin();
-		channelChatWindow.clickOnDocumentOption();
+		//channelChatWindow.clickOnDocumentOption();
 		channelChatWindow.uploadDocument("Document For Followers.docx");
 		
 		/*fileUpload.CopyFilePath("Document For Followers.docx");
