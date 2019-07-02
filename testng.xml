@@ -1,26 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Suite" parallel="classes">
-  <test thread-count="3" name="Test" parallel="classes">
+<suite thread-count="4" name="Suite" parallel="classes">
+  <test thread-count="4" name="Test" parallel="classes">
     <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromDiscoverPage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendPostToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifyAboutAppPage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowUnFollowAll"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneVideoToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToBlankNumber"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.EditProfile.EditChannelProfile"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.VerifySupportPage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneLocationToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromProfile"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToAdmin"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneTextMessageToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromDiscoverPage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromHomePage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.LoginTest"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToAdmin"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneAudioToFollower"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendPostToFollowers"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneImageToFollower"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneVideoToFollower"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToInvalidNumber"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteToValidNumber"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToFollowers"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToAdmin"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToFollowers"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToFollowers"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToAdmin"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToFollowers"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneLocationToFollower"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToInvalidNumber"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.Logout"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications.verifyTitle"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteUsingCSV"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToFollowers"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToAdmin"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToAdmin"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
