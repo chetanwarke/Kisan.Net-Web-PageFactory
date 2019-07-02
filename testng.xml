@@ -3,7 +3,7 @@
 <suite thread-count="4" name="Suite" parallel="classes">
   <test thread-count="4" name="Test" parallel="classes">
     <classes>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromDiscoverPage"/>
+     
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.AppDownloadInviteUsingCSV"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendPostToFollowers"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage"/>
@@ -20,12 +20,9 @@
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToFollowers"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneLocationToFollower"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.FollowChannelFromProfile"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendLocationToAdmin"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToValidNumber"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendOneToOneTextMessageToFollower"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromDiscoverPage"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromHomePage"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage.LoginTest"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToAdmin"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToAdmin"/>
@@ -36,7 +33,6 @@
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendAudioToFollowers"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToFollowers"/>
-      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel.UnfollowChannelFromUserProfile"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToBlankNumber"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage"/>
       <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Invitations.FollowChannelInviteToInvalidNumber"/>
