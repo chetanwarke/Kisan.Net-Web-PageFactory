@@ -1,12 +1,10 @@
 package com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel;
 
-import org.apache.log4j.Logger;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.DiscoverPage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
@@ -15,9 +13,6 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class UnfollowChannelFromDiscoverPage extends TestBase {
 
-	private final Logger log = LoggerHelper.getLogger(UnfollowChannelFromDiscoverPage.class);
-	
-	
 	//@Test(dataProvider="Channel To Be Unfollowed",description = "Search existing channel on discover page",groups = "UnfollowFromDiscover",dependsOnGroups="FollowFromDiscover")
 	@Test(dataProvider="Channel To Be Unfollowed",description = "Search existing channel on discover page")
 

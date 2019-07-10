@@ -1,17 +1,13 @@
 package com.uiFramework.KisanForum.KisanNetWeb.testScripts.loginPage;
 
-import org.apache.log4j.Logger;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class LoginTest extends TestBase{
-	private final Logger log = LoggerHelper.getLogger(LoginTest.class);
-	
 	@Test(dataProvider="testData",description="Login to App")
 	public void loginToApp(String emailId, String password, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {

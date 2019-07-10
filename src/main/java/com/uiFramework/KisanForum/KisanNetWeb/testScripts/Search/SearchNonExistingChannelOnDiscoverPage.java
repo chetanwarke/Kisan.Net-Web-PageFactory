@@ -1,23 +1,16 @@
 package com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search;
 
-import org.apache.log4j.Logger;
-import org.testng.ITestResult;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.Status;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.DiscoverPage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class SearchNonExistingChannelOnDiscoverPage extends TestBase {
-	
-	private final Logger log = LoggerHelper.getLogger(SearchNonExistingChannelOnDiscoverPage.class);
 	
 	@Test(dataProvider = "Channel To Be Searched", description = "Search non existing channel on discover page")
 	public void searchNonExistingChannelOnDiscoverPage(String emailId, String password, String channelName, String existingChannel, String runMode) throws Exception {

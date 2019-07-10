@@ -26,7 +26,7 @@ public class ChannelChatWindow {
 	WaitHelper waitHelper;
 	VerificationHelper verificationHelper;
 	FileUploadHelper fileUploadHelper;
-	private final Logger log = LoggerHelper.getLogger(ChannelDashboard.class);
+	private final Logger log = LoggerHelper.getLogger(ChannelChatWindow.class);
 	
 	@FindBy(xpath = "//div[@class='loadingoverlay']")
 	WebElement loadingOverlay;

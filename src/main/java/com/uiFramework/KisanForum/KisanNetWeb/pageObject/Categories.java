@@ -21,7 +21,7 @@ public class Categories {
 	WebDriver driver;
 	WaitHelper waitHelper;
 	VerificationHelper verificationHelper;
-	private final Logger log = LoggerHelper.getLogger(ChannelProfile.class);
+	private final Logger log = LoggerHelper.getLogger(Categories.class);
 	
 	@FindAll(@FindBy(xpath = "//h4[@class='font-bold-four mrgn-b-none']"))
 	List<WebElement> channelCategories;

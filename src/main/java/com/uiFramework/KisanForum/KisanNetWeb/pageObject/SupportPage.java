@@ -12,7 +12,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class SupportPage {
 
-	private final Logger log = LoggerHelper.getLogger(AboutApp.class);	
+	private final Logger log = LoggerHelper.getLogger(SupportPage.class);	
 	WebDriver driver;
 	WaitHelper waitHelper;
 	
