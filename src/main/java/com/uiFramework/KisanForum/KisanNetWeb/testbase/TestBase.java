@@ -50,7 +50,7 @@ public class TestBase {
 	
 	@BeforeSuite
 	public void beforeSuite() throws Exception{
-		extent = ExtentManager.getInstance();
+		//extent = ExtentManager.getInstance();		//TO BE UNCOMENTED
 	}
 	
 	/*@BeforeTest
@@ -82,6 +82,7 @@ public class TestBase {
 		ObjectReader.reader = new PropertyReader();
 		reportDirectery = new File(ResourceHelper.getResourcePath("src/main/resources/screenShots"));
 		setUpDriver(ObjectReader.reader.getBrowserType());
+		extent = ExtentManager.getInstance();					// TO BE DELETED
 		test = extent.createTest(getClass().getSimpleName());
 		driver.manage().deleteAllCookies();
 		getApplicationUrl(ObjectReader.reader.getExhibitorLoginUrl());
@@ -98,7 +99,7 @@ public class TestBase {
 			test.addScreenCaptureFromPath(imagePath);
 		}
 		else if(result.getStatus() == ITestResult.SUCCESS){
-			test.log(Status.PASS, result.getName()+" is pass");
+			test.log(Status.PASS, result.getName()+" is passed");
 			//String imagePath = captureScreen(result.getName(),driver);
 			//test.addScreenCaptureFromPath(imagePath);
 		}
@@ -113,13 +114,13 @@ public class TestBase {
 		}
 	}
 	
-	@AfterTest
+	/*@AfterTest
 	public void afterTest() throws Exception{
-		/*if(driver!=null){
+		if(driver!=null){
 			//driver.manage().deleteAllCookies();
 			//driver.quit();
-		}*/
-	}
+		}
+	}*/
 	
 	
 	

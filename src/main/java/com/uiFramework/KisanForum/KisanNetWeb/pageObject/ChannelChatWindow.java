@@ -228,11 +228,18 @@ public class ChannelChatWindow {
 		videoOption.click();
 	}	
 	
-	public void clickOnAudioOption() {
+	public void clickOnAudioOption() throws Exception {
 		log.info("Clicking on audio option");
 		logExtentReport("Clicking on audio option");
 		waitHelper.waitForElementVisible(audioOption, ObjectReader.reader.getExplicitWait());
-		audioOption.click();
+		//audioOption.click();
+		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+			audioOption.click();
+		}
+		else {
+			log.info("Attachment options are still loading");
+		}
+		Thread.sleep(1000);
 	}	
 	
 	public void clickOnRecordAudioOption() {

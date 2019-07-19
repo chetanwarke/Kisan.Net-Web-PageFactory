@@ -10,7 +10,7 @@ public class ExtentManager {
 	
 	private static ExtentReports extent;
 	
-	public static ExtentReports getInstance(){
+	public static synchronized ExtentReports getInstance(){
 		if(extent == null){
 			String location = ResourceHelper.getResourcePath("src/main/resources/reports/extent.html");
 			return createInstance(location);
