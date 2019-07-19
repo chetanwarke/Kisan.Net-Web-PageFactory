@@ -30,7 +30,7 @@ public class AppDownloadInviteUsingCSV extends TestBase{
 		homePage.clickOnInviteToAppButton();
 		
 		InvitePage invitePage = new InvitePage(driver);
-		invitePage.clickOnUploadCSVFile();
+		//invitePage.clickOnUploadCSVFile();
 		invitePage.uploadCSV("sampleCSVfileForAppDownload.csv");
 		/*fileUpload.CopyFilePath("sampleCSVfileForAppDownload.csv");
 		fileUpload.PasteFilePath();

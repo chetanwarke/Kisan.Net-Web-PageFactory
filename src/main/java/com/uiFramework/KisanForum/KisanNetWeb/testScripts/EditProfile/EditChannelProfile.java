@@ -25,6 +25,8 @@ public class EditChannelProfile extends TestBase{
 		
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginToApp(emailId, password);
+		//loginPage.loginToApp("exh_0008@mailinator.com", "kisankisan");
+
 		
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnLeftDrawerIcon();
@@ -50,6 +52,8 @@ public class EditChannelProfile extends TestBase{
 		channelProfile.clickOnCropProfileImageButton();
 		
 		channelProfile.enterChannelName(channelName);
+		//channelProfile.enterChannelName("Neel Kamal Bio");
+
 		
 		channelProfile.clickOnColorBucket();
 		channelProfile.setBackgroundColorCode(hexCode);

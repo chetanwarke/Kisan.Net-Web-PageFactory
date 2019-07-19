@@ -1,12 +1,10 @@
 package com.uiFramework.KisanForum.KisanNetWeb.testScripts.FollowAndUnFollowChannel;
 
-import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.ChannelProfile;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.DiscoverPage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
@@ -15,9 +13,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class FollowChannelFromProfile extends TestBase {
 
-private final Logger log = LoggerHelper.getLogger(FollowChannelFromDiscoverPage.class);
-	
-	@Test(dataProvider = "Follow Channel From Profile", description = "Follow channel from channel profile",groups = "FollowFromProfile",dependsOnGroups = "UnfollowFromDiscover")
+@Test(dataProvider = "Follow Channel From Profile", description = "Follow channel from channel profile",groups = "FollowFromProfile",dependsOnGroups = "UnfollowFromDiscover")
 	public void followChannelFromProfile(String emailId, String password, String channelName, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");

@@ -102,7 +102,7 @@
 						<suiteXmlFile>src/main/resources/testSuite/AppDownloadInvite.xml</suiteXmlFile>
 					</suiteXmlFiles>--> 
 					<suiteXmlFiles>
-						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

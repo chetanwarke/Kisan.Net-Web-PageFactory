@@ -1,20 +1,16 @@
 package com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications;
 
-import org.apache.log4j.Logger;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.AssertionHelper;
-import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LoginPage;
 import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class verifyTitle extends TestBase{
 
-	private final Logger log = LoggerHelper.getLogger(verifyTitle.class);
-	
 	@Test(dataProvider="get login data", description = "Verify the title of home page")
 	public void verifyTitleOfPage(String emailId, String password, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {

@@ -1,12 +1,10 @@
 package com.uiFramework.KisanForum.KisanNetWeb.testScripts.Verifications;
 
-import org.apache.log4j.Logger;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.AboutApp;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.HomePage;
 import com.uiFramework.KisanForum.KisanNetWeb.pageObject.LeftDrawer;
@@ -15,9 +13,7 @@ import com.uiFramework.KisanForum.KisanNetWeb.testbase.TestBase;
 
 public class VerifyAboutAppPage extends TestBase {
 
-private Logger log = LoggerHelper.getLogger(VerifyAboutAppPage.class);
-	
-	@Test(dataProvider = "About page content")
+@Test(dataProvider = "About page content")
 	public void verifyAboutPage(String emailId, String password, String namaskar, String version, String message, String runMode) throws Exception {
 		if(runMode.equalsIgnoreCase("n")) {
 			throw new SkipException("Run mode for this data is marked N");
