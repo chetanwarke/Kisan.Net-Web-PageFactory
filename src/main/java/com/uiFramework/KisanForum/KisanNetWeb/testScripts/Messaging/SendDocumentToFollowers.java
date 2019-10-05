@@ -31,7 +31,7 @@ public class SendDocumentToFollowers extends TestBase{
 		ChannelChatWindow channelChatWindow = new ChannelChatWindow(driver);
 		channelChatWindow.clickOnAttachmentPin();
 		//channelChatWindow.clickOnDocumentOption();
-		channelChatWindow.uploadDocument("Document For Followers.docx");
+		channelChatWindow.uploadDocument("Document For Followers.pdf");
 		
 		/*fileUpload.CopyFilePath("Document For Followers.docx");
 		fileUpload.PasteFilePath();

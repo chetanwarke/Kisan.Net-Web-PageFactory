@@ -142,7 +142,7 @@ public class ChannelChatWindow {
 	@FindBy(xpath = "//input[@accept='audio/*']")
 	WebElement sendAudioInput;
 	
-	@FindBy(xpath = "//input[@accept='.pdf, .doc, .docx']")
+	@FindBy(xpath = "//input[@accept='.pdf']")
 	WebElement sendDocumentInput;
 	
 	@FindBy(xpath = "//input[@accept='image/*, video/*']")

@@ -2,6 +2,7 @@
 package com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration;
 
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,9 +28,14 @@ public class ChromeBrowser {
 		Map<String, Object> prefs=new HashMap<String,Object>();
 		prefs.put("profile.default_content_setting_values.notifications", 1);
 		prefs.put("profile.default_content_setting_values.geolocation", 1);
+		prefs.put("credentials_enable_service", false);
+		prefs.put("profile.password_manager_enabled", false);
 
 		//1-Allow, 2-Block, 0-default
 		option.setExperimentalOption("prefs",prefs);
+		option.setExperimentalOption("useAutomationExtension", false);
+		option.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+		
 		
 		DesiredCapabilities chrome = DesiredCapabilities.chrome();
 		chrome.setJavascriptEnabled(true);
