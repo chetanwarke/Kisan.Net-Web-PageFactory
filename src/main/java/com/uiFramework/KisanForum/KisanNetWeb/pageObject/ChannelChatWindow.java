@@ -14,6 +14,7 @@ import com.aventstack.extentreports.Status;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.assertion.VerificationHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.browserConfiguration.config.ObjectReader;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.fileUpload.FileUploadHelper;
+import com.uiFramework.KisanForum.KisanNetWeb.helper.javaScript.JavaScriptHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.resource.ResourceHelper;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.wait.WaitHelper;
@@ -142,7 +143,7 @@ public class ChannelChatWindow {
 	@FindBy(xpath = "//input[@accept='audio/*']")
 	WebElement sendAudioInput;
 	
-	@FindBy(xpath = "//input[@accept='.pdf, .doc, .docx']")
+	@FindBy(xpath = "//input[@accept='.pdf']")
 	WebElement sendDocumentInput;
 	
 	@FindBy(xpath = "//input[@accept='image/*, video/*']")
@@ -339,9 +340,10 @@ public class ChannelChatWindow {
 	public void clickOnSendPostButton() throws Exception {
 		log.info("Clicking on send post button");
 		logExtentReport("Clicking on send post button");
-		//JavaScriptHelper javascriptHelper = new JavaScriptHelper(driver);
+		JavaScriptHelper javascriptHelper = new JavaScriptHelper(driver);
 		//javascriptHelper.scrollDownVertically();
 		//javascriptHelper.scrollIntoView(false);
+		javascriptHelper.scrollIntoView(sendPostButton);
 		Thread.sleep(1000);
 		sendPostButton.click();
 	}

@@ -219,12 +219,13 @@ public class LeftDrawer {
 		log.info("Clicking on my channel option");
 		logExtentReport("Clicking on my channel option");
 		waitHelper.WaitForElementClickable(optionMyChannel, ObjectReader.reader.getExplicitWait());
-		if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
+		/*if(!waitHelper.WaitForElementDisapper(loadingOverlay)){
 			optionMyChannel.click();
 		}
 		else {
 			log.info("Left drawer is still loading");
-		}
+		}*/    //Commenting for temp purpose to check if the issue resolved
+		optionMyChannel.click(); // Adding for temp purpose to check if issue resolved
 		Thread.sleep(1000);
 	}
 }

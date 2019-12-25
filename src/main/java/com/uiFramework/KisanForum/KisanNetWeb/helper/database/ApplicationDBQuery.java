@@ -7,14 +7,14 @@ import java.util.List;
 
 public class ApplicationDBQuery {
 
-	public int getEmpSalary(int empId) throws NumberFormatException, SQLException {
-		int salary = 0;
-		String dbQuery = "SELECT salary FROM person.employee where idemployee=" + empId;
+		
+	public int getOTP(String mobileNumber) throws NumberFormatException, SQLException {
+		int id = 0;
+		String dbQuery = "select * from profiles_verifymobiles where mobile='"+ mobileNumber+ "' AND code_verified_date is NULL order by code_sent_date desc;";
 		ResultSet result = DataBaseHelper.getResultSet(dbQuery);
-		while (result.next()) {
-			salary = Integer.parseInt(result.getString("salary"));
-		}
-		return salary;
+		result.next();
+		id = Integer.parseInt(result.getString("code"));
+		return id;
 	}
 	
 	public List<Employee> getEmployee() throws SQLException{
@@ -36,11 +36,11 @@ public class ApplicationDBQuery {
 
 	public static void main(String[] args) throws NumberFormatException, SQLException {
 		ApplicationDBQuery applicationDBQuery = new ApplicationDBQuery();
-		int salary = applicationDBQuery.getEmpSalary(2);
-		System.out.println(salary);
-		List<Employee> listOfData = applicationDBQuery.getEmployee();
+		int otp = applicationDBQuery.getOTP("+919021633629");
+		System.out.println("Verification code is : " + otp);
+		/*List<Employee> listOfData = applicationDBQuery.getEmployee();
 		for(Employee data: listOfData){
 			System.out.println("empId is :"+data.getEmpId()+" emp salary is: "+data.getSalary()+" emp name is: "+data.getName());
-		}
+		}*/
 	}
 }

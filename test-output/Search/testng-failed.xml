@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Search]">
+  <test name="Search_Tests(failed)">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="searchExistingChannelOnDiscoverPage" invocation-numbers="1"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnDiscoverPage -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="searchExistingChannelOnHomePage" invocation-numbers="1"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchExistingChannelOnHomePage -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="searchNonExistingChannelOnHomePage" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnHomePage -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="searchNonExistingChannelOnDiscoverPage" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Search.SearchNonExistingChannelOnDiscoverPage -->
+    </classes>
+  </test> <!-- Search_Tests(failed) -->
+</suite> <!-- Failed suite [Search] -->

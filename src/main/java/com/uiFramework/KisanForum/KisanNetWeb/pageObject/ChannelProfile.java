@@ -80,7 +80,7 @@ public class ChannelProfile {
 	@FindBy(xpath = "//button[contains(text(),'OK')]")
 	WebElement btnOKSetBackgroundColor;
 	
-	@FindBy(xpath = "//textarea[@placeholder='Max.140 character']")
+	@FindBy(xpath = "//textarea[@placeholder='Max.100 character']")
 	WebElement channelDescription;
 	
 	@FindBy(xpath = "//img[@id='myImg']")
@@ -288,7 +288,7 @@ public class ChannelProfile {
 	public void clickOnCropProfileImageButton() {
 		log.info("Clicking on crop channel profile image button");
 		logExtentReport("Clicking on crop channel profile image button");
-		waitHelper.waitForElementVisible(cropChannelProfileImage, 10);
+		waitHelper.WaitForElementClickable(cropChannelProfileImage, 10);
 		cropChannelProfileImage.click();
 	}
 	

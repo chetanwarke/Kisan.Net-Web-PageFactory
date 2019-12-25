@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Messaging">
+  <test thread-count="1" name="Messaging_Tests">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToFollowers"/>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendPostToFollowers"/>    
+    </classes>
+  </test> <!-- Messaging_Tests -->
+</suite> <!-- Messaging -->
