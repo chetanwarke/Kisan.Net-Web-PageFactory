@@ -1,0 +1,17 @@
+[0619/125733.595:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0619/125916.389:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0619/130211.885:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0619/130746.228:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0619/131432.935:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0619/131631.771:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0619/131748.445:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0619/132942.198:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0620/131628.544:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0620/133738.358:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1108/174509.818:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[1108/174509.824:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[1108/174509.824:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[1108/174509.825:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[1223/153254.571:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1223/153254.578:ERROR:exception_snapshot_win.cc(98)] thread ID 492 not found in process
+[1223/153254.579:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)

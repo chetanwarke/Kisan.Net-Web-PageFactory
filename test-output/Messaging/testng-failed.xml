@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Messaging]">
+  <test name="Messaging_Tests(failed)">
+    <classes>
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendPostToFollowers">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="sendImagePostToFollowers" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendPostToFollowers -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToFollowers">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="sendTextMessagesToFollowers" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendTextMessageToFollowers -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToFollowers">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendImageToFollowers -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToFollowers">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendDocumentToFollowers -->
+      <class name="com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToFollowers">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.uiFramework.KisanForum.KisanNetWeb.testScripts.Messaging.SendVideoToFollowers -->
+    </classes>
+  </test> <!-- Messaging_Tests(failed) -->
+</suite> <!-- Failed suite [Messaging] -->
