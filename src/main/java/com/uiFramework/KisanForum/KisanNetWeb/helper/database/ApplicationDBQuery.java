@@ -36,8 +36,8 @@ public class ApplicationDBQuery {
 
 	public static void main(String[] args) throws NumberFormatException, SQLException {
 		ApplicationDBQuery applicationDBQuery = new ApplicationDBQuery();
-		int id = applicationDBQuery.getOTP("+919021633629");
-		System.out.println(id);
+		int otp = applicationDBQuery.getOTP("+919021633629");
+		System.out.println("Verification code is : " + otp);
 		/*List<Employee> listOfData = applicationDBQuery.getEmployee();
 		for(Employee data: listOfData){
 			System.out.println("empId is :"+data.getEmpId()+" emp salary is: "+data.getSalary()+" emp name is: "+data.getName());
