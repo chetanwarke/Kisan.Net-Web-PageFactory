@@ -8,15 +8,34 @@ import java.sql.Statement;
 
 import org.apache.log4j.Logger;
 
+import com.mysql.cj.jdbc.DatabaseMetaData;
 import com.uiFramework.KisanForum.KisanNetWeb.helper.logger.LoggerHelper;
 
 public class DataBaseHelper {
 
 	private static Logger log = LoggerHelper.getLogger(DataBaseHelper.class);
 	
-	private static String url = "jdbc:mysql://localhost/person";
+	/*private static String url = "jdbc:mysql://localhost/person";
 	private static String driverName = "com.mysql.jdbc.Driver";
 	private static String userName = "root";
+	private static String password = "password";
+	private static Connection connection;
+	private static DataBaseHelper instance = null;*/
+	
+	/*private static String url = "jdbc:mysql://localhost:3306/greencloudservice/dev/greencloudservice_dev_kisan19";
+	private static String driverName = "com.mysql.cj.jdbc.Driver";
+	//private static String driverName = "com.mysql.jdbc.Driver";
+	
+	private static String userName = "root";
+	private static String password = "";
+	private static Connection connection;
+	private static DataBaseHelper instance = null;*/
+	
+	//private static String url = "jdbc:postgresql://localhost:5432/ebdb";
+	private static String url = "jdbc:postgresql://aa2jead5i3jjnu.csmxhknboltr.ap-south-1.rds.amazonaws.com:5432/ebdb";
+	private static String driverName = "org.postgresql.Driver";
+	//private static String userName = "KisanOAuth";
+	private static String userName = "KisanOAuth";
 	private static String password = "password";
 	private static Connection connection;
 	private static DataBaseHelper instance = null;
